@@ -24,7 +24,7 @@ export default function ExperiencePage() {
       company: "DoubleTap Innovations and Technologies Pvt. Ltd",
       location: "Chennai, Tamil Nadu, India",
       period: "June 2024 - Present",
-      // type: "Full-time",
+      type: "Full-time",
       description:
         "Working as an AI Software Engineer responsible for designing, developing, and deploying scalable machine learning models, natural language processing systems, and generative AI solutions using modern AI technologies.",
       responsibilities: [
@@ -52,7 +52,7 @@ export default function ExperiencePage() {
       company: "DoubleTap Innovations and Technologies Pvt. Ltd",
       location: "Chennai, Tamil Nadu, India",
       period: "April 2024 - May 2024",
-      // type: "Internship",
+      type: "Internship",
       description:
         "Worked as an AI Software Engineer Intern, focusing on hands-on implementation of machine learning models, data pipelines, and AI-powered features under production guidance.",
       responsibilities: [
@@ -85,7 +85,7 @@ export default function ExperiencePage() {
       company: "TVS Electronics Pvt. Ltd",
       location: "Hosur, Tamil Nadu, India",
       period: "2019 - 2021",
-      // type: "Full-time",
+      type: "Full-time",
       description:
         "Worked as an Electronics Engineer focusing on testing, assembling, and maintaining electronic systems and components while ensuring product quality and performance. Gained strong hands-on experience in hardware troubleshooting and practical applications of electrical engineering concepts.",
       responsibilities: [
@@ -240,14 +240,16 @@ export default function ExperiencePage() {
                       >
                         {/* Role & Company */}
                         <div className="mb-6">
-                          <div
-                            className={`inline-block px-4 py-1 rounded-full text-sm font-medium mb-4 ${theme === "dark"
-                              ? `bg-gradient-to-r ${exp.color} text-white`
-                              : `bg-gradient-to-r ${exp.color} text-white`
-                              }`}
-                          >
-                            {exp.type}
-                          </div>
+                          {exp.type && (
+                            <div
+                              className={`inline-block px-4 py-1 rounded-full text-sm font-medium mb-4 ${theme === "dark"
+                                ? `bg-gradient-to-r ${exp.color} text-white`
+                                : `bg-gradient-to-r ${exp.color} text-white`
+                                }`}
+                            >
+                              {exp.type}
+                            </div>
+                          )}
                           <h2 className="text-2xl font-bold mb-1">{exp.role}</h2>
                           <h3 className={`text-xl ${theme === "dark" ? "text-purple-300" : "text-purple-600"}`}>
                             {exp.company}

@@ -55,31 +55,35 @@ export default function ContactPage() {
     e.preventDefault()
     setIsLoading(true)
     setStatus("")
-    console.log("Form submitted:", formData)
 
     try {
-      const res = await fetch("https://ajithar-b.onrender.com/send-message", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "e901ce28-baae-4ccb-a564-42b73de1bb77",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: `${formData.name} (Portfolio Inquiry)`,
+        }),
       })
 
-      if (!res.ok) {
-        throw new Error(`Server responded with status ${res.status}`)
-      }
-
       const data = await res.json()
-      console.log("Response from backend:", data)
 
       if (data.success) {
-        setStatus("Thank you! Your message has been sent. I'll get back to you soon.")
+        setStatus("✅ Thank you! Your message has been sent. I'll get back to you soon.")
         setFormData({ name: "", email: "", subject: "", message: "" })
       } else {
-        setStatus("❌ Oops! Something went wrong. Please try again later.")
+        setStatus(data.message || "❌ Oops! Something went wrong. Please try again later.")
       }
     } catch (error: any) {
       console.error("Error sending message:", error)
-      setStatus("❌ Server error. Please try again later.")
+      setStatus("❌ Network error. Please try again later.")
     } finally {
       setIsLoading(false)
     }
@@ -256,136 +260,139 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-
-                  <motion.button
-                    type="submit"
-                    disabled={isLoading}
-                    className={`w-full px-8 py-3 rounded-lg font-medium transition-all flex items-center justify-center space-x-2 ${theme === "dark"
-                      ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
-                      : "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600"
-                      }`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    {isLoading ? (
-                      <>
-                        <Spinner />
-                        <span>Sending...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        <span>Send Message</span>
-                      </>
-                    )}
-                  </motion.button>
-
-                  {status && (
-                    <p
-                      className={`text-center mt-4 text-sm ${status.startsWith("✅") ? "text-green-500" : "text-red-500"
-                        }`}
-                    >
-                      {status}
-                    </p>
-                  )}
-                </form>
-              </motion.div>
-
-              {/* Contact Information */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="space-y-8"
-              >
-                {/* Contact Details */}
-                <div
-                  className={`p-8 rounded-2xl ${theme === "dark"
-                    ? "bg-white/5 border border-white/10"
-                    : "bg-black/5 border border-black/10"
-                    }`}
-                >
-                  <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                  <div className="space-y-6">
-                    {contactInfo.map((info, index) => (
-                      <motion.a
-                        key={info.title}
-                        href={info.href}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                        className={`flex items-center space-x-4 p-4 rounded-lg transition-all ${theme === "dark" ? "hover:bg-white/5" : "hover:bg-black/5"
+                    <div className="pt-2">
+                      <motion.button
+                        type="submit"
+                        disabled={isLoading}
+                        className={`w-full px-8 py-3.5 rounded-lg font-medium transition-all flex items-center justify-center space-x-2 ${theme === "dark"
+                          ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
+                          : "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600"
                           }`}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <div
-                          className={`p-3 rounded-full ${theme === "dark"
-                            ? "bg-gradient-to-r from-purple-600 to-pink-600"
-                            : "bg-gradient-to-r from-purple-500 to-pink-500"
+                        {isLoading ? (
+                          <>
+                            <Spinner />
+                            <span>Sending...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-5 h-5" />
+                            <span>Send Message</span>
+                          </>
+                        )}
+                      </motion.button>
+
+                      {status && (
+                        <p
+                          className={`text-center mt-3 text-sm ${status.startsWith("✅") ? "text-green-500" : "text-red-500"
                             }`}
                         >
-                          <div className="text-white">{info.icon}</div>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">{info.title}</h4>
-                          <p className={theme === "dark" ? "text-gray-300" : "text-gray-600"}>
-                            {info.value}
-                          </p>
-                        </div>
-                      </motion.a>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Social Links */}
-                <div
-                  className={`p-8 rounded-2xl ${theme === "dark"
-                    ? "bg-white/5 border border-white/10"
-                    : "bg-black/5 border border-black/10"
-                    }`}
-                >
-                  <h3 className="text-2xl font-bold mb-6 text-center">Follow Me</h3>
-                  <div className="flex flex-wrap justify-center gap-4">
-                    {socialLinks.map((social, index) => (
-                      <motion.a
-                        key={social.name}
-                        href={social.href}
-                        className={`p-3 rounded-full transition-all flex items-center justify-center ${theme === "dark"
-                          ? "bg-white/10 hover:bg-white/20"
-                          : "bg-black/10 hover:bg-black/20"
-                          } ${social.color}`}
-                        whileHover={{ scale: 1.1, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                      >
-                        {social.icon}
-                      </motion.a>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Availability */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
-                  className={`p-8 rounded-2xl text-center ${theme === "dark"
-                    ? "bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20"
-                    : "bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200"
-                    }`}
-                >
-                  <div className="flex justify-center mb-4">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Available for Work</h3>
-                  <p className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
-                    I'm currently available for freelance projects and full-time opportunities.
-                  </p>
+                          {status}
+                        </p>
+                      )}
+                    </div>
+                  </form>
                 </motion.div>
-              </motion.div>
+
+                {/* Contact Information & Availability Column */}
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="flex flex-col justify-between space-y-6"
+                >
+                  {/* Contact Details & Social Links Combined Card */}
+                  <div
+                    className={`p-8 rounded-2xl flex-1 flex flex-col justify-between ${theme === "dark"
+                      ? "bg-white/5 border border-white/10"
+                      : "bg-black/5 border border-black/10"
+                      }`}
+                  >
+                    <div>
+                      <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+                      <div className="space-y-4">
+                        {contactInfo.map((info, index) => (
+                          <motion.a
+                            key={info.title}
+                            href={info.href}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                            className={`flex items-center space-x-4 p-3.5 rounded-xl transition-all ${theme === "dark" ? "hover:bg-white/5" : "hover:bg-black/5"
+                              }`}
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            <div
+                              className={`p-3 rounded-full shrink-0 ${theme === "dark"
+                                ? "bg-gradient-to-r from-purple-600 to-pink-600"
+                                : "bg-gradient-to-r from-purple-500 to-pink-500"
+                                }`}
+                            >
+                              <div className="text-white">{info.icon}</div>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-sm">{info.title}</h4>
+                              <p className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                                {info.value}
+                              </p>
+                            </div>
+                          </motion.a>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Social Links Section Inside Card */}
+                    <div className="pt-6 mt-6 border-t border-white/10">
+                      <h4 className={`text-sm font-semibold uppercase tracking-wider mb-4 ${theme === "dark" ? "text-purple-300" : "text-purple-600"}`}>
+                        Connect With Me
+                      </h4>
+                      <div className="flex flex-wrap gap-3">
+                        {socialLinks.map((social, index) => (
+                          <motion.a
+                            key={social.name}
+                            href={social.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={social.name}
+                            className={`p-3 rounded-full transition-all flex items-center justify-center ${theme === "dark"
+                              ? "bg-white/10 hover:bg-white/20"
+                              : "bg-black/10 hover:bg-black/20"
+                              } ${social.color}`}
+                            whileHover={{ scale: 1.1, y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                          >
+                            {social.icon}
+                          </motion.a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Availability Card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className={`p-6 rounded-2xl text-center ${theme === "dark"
+                      ? "bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20"
+                      : "bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200"
+                      }`}
+                  >
+                    <div className="flex justify-center mb-3">
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <h3 className="text-xl font-bold mb-1">Available for Work</h3>
+                    <p className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                      I'm currently available for freelance projects and full-time opportunities.
+                    </p>
+                  </motion.div>
+                </motion.div>
             </div>
             <div className="w-full text-center py-8">
               <p
