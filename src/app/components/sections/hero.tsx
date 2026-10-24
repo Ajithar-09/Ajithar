@@ -125,7 +125,7 @@ export default function Hero({ id }: { id?: string }) {
                         {/* Socials & Resume */}
                         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
                             <a
-                                href="/Ajithar Resume.pdf"
+                                href="/Ajithar - AI-ML Engineer.pdf"
                                 download="Ajithar - AI-ML Engineer.pdf"
                                 className="px-6 py-2 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
                             >
