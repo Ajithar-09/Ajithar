@@ -32,45 +32,45 @@ export default function About({ id }: { id?: string }) {
     const timelineData = [
         {
             year: "2024",
-            title: "AI Software Engineer",
+            title: "AI/ML Software Engineer",
             company: "DoubleTap Innovations and Technologies Pvt. Ltd",
-            description: "Leading development of scalable AI solutions and intelligent applications using modern technologies..",
+            description: "Building production RAG pipelines, FastAPI AI microservices, and LLM powered applications for business process automation.",
             current: true,
         },
         {
             year: "April - May 2024",
-            title: "AI Software Engineer Intern",
+            title: "AI/ML Software Developer Intern",
             company: "TabSquare InfoTech Private Limited",
             description:
-                "Worked on building and testing machine learning and NLP models, supporting the development of AI-powered features and assisting with model integration into backend services under senior engineer guidance.",
+                "Assisted in preprocessing datasets, experimenting with transformer models, and building prototype NLP endpoints using FastAPI.",
             current: false,
         },
         {
             year: "2021-2024",
             title: "Bachelor of Technology",
             company: "Mepco Schlenk Engineering College",
-            description: "Artificial Intelligence and Data Science",
+            description: "Artificial Intelligence and Data Science covering machine learning algorithms, deep learning, and software engineering principles.",
             current: false,
         },
         {
             year: "2019-2021",
             title: "Engineer",
             company: "TVS Electronics pvt Ltd",
-            description: "Passionate Electrical and Electronics Engineering diploma holder dedicated to teaching and mentoring future engineers through practical, real-world learning.",
+            description: "Conducted functional board testing, circuit diagnostics, and quality inspection for high volume electronic component manufacturing.",
             current: false,
         },
         {
             year: "2018-2019",
             title: "Technician",
             company: "Tenneco Automotive India Pvt Ltd",
-            description: "Passionate Electrical and Electronics Engineering diploma holder dedicated to teaching and mentoring future engineers through practical, real-world learning.",
+            description: "Operated automated assembly lines and conducted dimensional quality checks on automotive exhaust and suspension components.",
             current: false,
         },
         {
             year: "2015-2018",
             title: "Diploma",
             company: "Government Polytechnic College",
-            description: "Electrical and Electronics Engineering",
+            description: "Electrical and Electronics Engineering with practical training in circuit theory, testing instruments, and industrial electronics.",
             current: false,
         },
     ]
@@ -159,13 +159,13 @@ export default function About({ id }: { id?: string }) {
                                         }`}
                                 >
                                     <p>
-                                        I'm a passionate AI Software Engineer with a strong foundation in computer science and expertise across modern AI domains, including machine learning, deep learning, natural language processing, computer vision, and generative AI. My journey in technology began during my undergraduate studies, where I discovered my passion for building intelligent systems, solving real-world problems, and creating impactful AI driven solutions.
+                                        I am an AI/ML Software Engineer specializing in building practical, production ready AI systems. My work focuses on Retrieval Augmented Generation (RAG), conversational agent workflows, and connecting large language models with enterprise databases through clean, testable FastAPI services.
                                     </p>
                                     <p>
-                                        During my academic journey at Mepco Schlenk Engineering College, I gained a strong foundation in software engineering principles, data structures, and algorithms. This knowledge not only sharpened my problem solving skills but also prepared me to tackle complex challenges and develop scalable, AI driven applications.
+                                        My journey began in electronics engineering, where I spent several years working in hardware diagnostics and manufacturing quality control at TVS Electronics and Tenneco. That background instilled a disciplined troubleshooting mindset and a strict respect for reliability. Transitioning into Artificial Intelligence and Data Science at Mepco Schlenk Engineering College, I applied that engineering foundation toward machine learning algorithms, data engineering, and modern NLP architectures.
                                     </p>
                                     <p>
-                                        Currently working at DoubleTap Innovations and Technologies Pvt. Ltd, I specialize in developing AI driven solutions, including machine learning models, natural language processing, computer vision, and generative AI applications. I focus on building scalable, intelligent systems while staying updated with the latest advancements in artificial intelligence and industry best practices.
+                                        At DoubleTap Innovations, I take AI features from initial architecture all the way to production. This includes building vector retrieval pipelines, connecting LLMs to business databases, optimizing response latency, and setting up output guardrails. I focus on building dependable software where accuracy, speed, and infrastructure cost stay balanced.
                                     </p>
                                 </div>
                             </div>

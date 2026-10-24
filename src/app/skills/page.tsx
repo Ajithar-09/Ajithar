@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { Layers, Database, Server, Cloud, Users, Lightbulb, Zap, BarChart3, Globe, Brain, Bot } from "lucide-react"
+import { Layers, Database, Server, Cloud, Users, Lightbulb, Zap, BarChart3, Globe, Brain, Bot, ShieldCheck } from "lucide-react"
 import { useTheme } from "../components/theme-provider"
 import Navigation from "../components/navigation"
 import ThemeToggle from "../components/theme-toggle"
@@ -18,120 +18,7 @@ export default function SkillsPage() {
   })
 
   const skillCategories = [
-    // {
-    //   title: "Frontend Development",
-    //   icon: <Code className="w-8 h-8" />,
-    //   skills: [
-    //     { name: "React", level: 90 },
-    //     { name: "Next.js", level: 85 },
-    //     { name: "TypeScript", level: 80 },
-    //     { name: "Tailwind CSS", level: 90 },
-    //     { name: "HTML5/CSS3", level: 95 },
-    //     { name: "JavaScript", level: 90 },
-    //   ],
-    //   color: "from-blue-500 to-cyan-500",
-    // },
-    // {
-    //   title: "Backend Development",
-    //   icon: <Server className="w-8 h-8" />,
-    //   skills: [
-    //     { name: "Node.js", level: 85 },
-    //     { name: "Express.js", level: 80 },
-    //     { name: "Python", level: 75 },
-    //     { name: "Django", level: 70 },
-    //     { name: "REST APIs", level: 85 },
-    //     { name: "GraphQL", level: 65 },
-    //   ],
-    //   color: "from-green-500 to-emerald-500",
-    // },
-    // {
-    //   title: "Database & Storage",
-    //   icon: <Database className="w-8 h-8" />,
-    //   skills: [
-    //     { name: "MongoDB", level: 80 },
-    //     { name: "PostgreSQL", level: 75 },
-    //     { name: "MySQL", level: 80 },
-    //     { name: "Redis", level: 65 },
-    //     { name: "Firebase", level: 70 },
-    //   ],
-    //   color: "from-purple-500 to-pink-500",
-    // },
-    // {
-    //   title: "Cloud Engineering",
-    //   icon: <Cloud className="w-8 h-8" />,
-    //   skills: [
-    //     { name: "AWS", level: 75 },
-    //     { name: "Azure", level: 70 },
-    //     { name: "Google Cloud", level: 65 },
-    //     { name: "Kubernetes", level: 60 },
-    //     { name: "Docker", level: 80 },
-    //     { name: "Terraform", level: 65 },
-    //   ],
-    //   color: "from-orange-500 to-red-500",
-    // },
-    // {
-    //   title: "Data Engineering",
-    //   icon: <BarChart3 className="w-8 h-8" />,
-    //   skills: [
-    //     { name: "ETL Pipelines", level: 70 },
-    //     { name: "Apache Spark", level: 65 },
-    //     { name: "Hadoop", level: 60 },
-    //     { name: "Data Warehousing", level: 75 },
-    //     { name: "SQL", level: 85 },
-    //     { name: "Data Modeling", level: 70 },
-    //   ],
-    //   color: "from-indigo-500 to-purple-500",
-    // },
-    // {
-    //   title: "DevOps",
-    //   icon: <Network className="w-8 h-8" />,
-    //   skills: [
-    //     { name: "CI/CD", level: 80 },
-    //     { name: "GitHub Actions", level: 85 },
-    //     { name: "Jenkins", level: 70 },
-    //     { name: "Infrastructure as Code", level: 75 },
-    //     { name: "Monitoring", level: 65 },
-    //     { name: "Deployment Automation", level: 80 },
-    //   ],
-    //   color: "from-cyan-500 to-blue-500",
-    // },
-    // {
-    //   title: "Big Data Technologies",
-    //   icon: <Layers className="w-8 h-8" />,
-    //   skills: [
-    //     { name: "Apache Kafka", level: 65 },
-    //     { name: "Elasticsearch", level: 70 },
-    //     { name: "Airflow", level: 60 },
-    //     { name: "Databricks", level: 55 },
-    //     { name: "Data Lakes", level: 65 },
-    //   ],
-    //   color: "from-yellow-500 to-amber-500",
-    // },
-    // {
-    //   title: "Tools & Technologies",
-    //   icon: <Zap className="w-8 h-8" />,
-    //   skills: [
-    //     { name: "VS Code", level: 95 },
-    //     { name: "Git/GitHub", level: 90 },
-    //     { name: "Figma", level: 70 },
-    //     { name: "Postman", level: 85 },
-    //     { name: "Webpack", level: 65 },
-    //   ],
-    //   color: "from-rose-500 to-pink-500",
-    // },
-    // {
-    //   title: "Soft Skills",
-    //   icon: <Users className="w-8 h-8" />,
-    //   skills: [
-    //     { name: "Problem Solving", level: 90 },
-    //     { name: "Team Collaboration", level: 85 },
-    //     { name: "Communication", level: 80 },
-    //     { name: "Leadership", level: 75 },
-    //     { name: "Time Management", level: 85 },
-    //   ],
-    //   color: "from-pink-500 to-rose-500",
-    // },
-    {
+   {
   title: "Artificial Intelligence & Machine Learning",
   icon: <Brain className="w-8 h-8" />,
   skills: [
@@ -139,19 +26,20 @@ export default function SkillsPage() {
     { name: "Deep Learning", level: 85 },
     { name: "Natural Language Processing (NLP)", level: 80 },
     { name: "Computer Vision", level: 80 },
-    { name: "Reinforcement Learning", level: 75 },
+    { name: "Model Evaluation & Optimization", level: 75 },
   ],
   color: "from-blue-500 to-cyan-500",
 },
 {
-  title: "Generative AI & LLMs",
+  title: "Generative AI & Agentic Systems",
   icon: <Bot className="w-8 h-8" />,
   skills: [
-    { name: "Large Language Models (LLMs),Langchain", level: 85 },
-    { name: "RAG (Retrieval-Augmented Generation)", level: 80 },
-    { name: "Prompt Engineering", level: 90 },
-    { name: "Fine-tuning & Model Customization", level: 80 },
-    { name: "OpenAI / Google API", level: 85 },
+    { name: "LLMs & Model Integration", level: 85 },
+    { name: "Advanced RAG & Context Engineering", level: 80 },
+    { name: "AI Agents, LangGraph & Tool Calling", level: 85 },
+    { name: "MCP & Agent Workflow Orchestration", level: 75 },
+    { name: "LLM Evaluation & Observability", level: 80 },
+    { name: "LLM Cost & Latency Optimization", level: 85 },
   ],
   color: "from-green-500 to-emerald-500",
 },
@@ -160,106 +48,84 @@ export default function SkillsPage() {
   icon: <BarChart3 className="w-8 h-8" />,
   skills: [
     { name: "Python (Pandas, NumPy)", level: 95 },
-    { name: "ETL Pipelines", level: 80 },
-    { name: "SQL", level: 85 },
-    { name: "Apache Spark", level: 70 },
-    { name: "Data Modeling", level: 75 },
+    { name: "SQL & Query Optimization", level: 85 },
+    { name: "ETL / ELT Pipeline Engineering", level: 80 },
+    { name: "Data Validation & Quality", level: 80 },
+    { name: "Distributed Data Processing (Apache Spark)", level: 70 },
   ],
   color: "from-purple-500 to-pink-500",
 },
 {
-  title: "MLOps & Deployment",
+  title: "AI Infrastructure & LLMOps",
   icon: <Server className="w-8 h-8" />,
   skills: [
-    { name: "MLflow", level: 75 },
-    { name: "Docker", level: 85 },
-    { name: "Kubernetes", level: 70 },
-    { name: "CI/CD for ML", level: 80 },
-    { name: "Model Monitoring", level: 65 },
+    { name: "FastAPI & AI Backend Services", level: 90 },
+    { name: "Docker & Containerization", level: 85 },
+    { name: "CI/CD & Production Deployment", level: 80 },
+    { name: "LLM Tracing & Monitoring", level: 75 },
+    { name: "Distributed Workflows & Queues", level: 75 },
   ],
   color: "from-orange-500 to-red-500",
 },
 {
-  title: "Cloud Platforms",
+  title: "Cloud & AI Infrastructure",
   icon: <Cloud className="w-8 h-8" />,
   skills: [
-    { name: "AWS (SageMaker, Lambda)", level: 80 },
-    { name: "Google Cloud (Vertex AI)", level: 70 },
-    { name: "Azure AI Services", level: 65 },
+    { name: "AWS (S3, Lambda, SageMaker)", level: 80 },
+    { name: "Cloud Based AI Deployment", level: 80 },
+    { name: "Docker & Containerized Deployment", level: 75 },
+    { name: "Serverless Architecture", level: 75 },
+    { name: "Cloud Storage & IAM", level: 75 },
   ],
   color: "from-indigo-500 to-purple-500",
 },
 {
-  title: "Tools & Libraries",
+  title: "AI Frameworks & Libraries",
   icon: <Zap className="w-8 h-8" />,
   skills: [
-    { name: "TensorFlow", level: 85 },
     { name: "PyTorch", level: 90 },
+    { name: "TensorFlow / Keras", level: 85 },
     { name: "Scikit-learn", level: 85 },
-    { name: "OpenCV", level: 80 },
     { name: "Hugging Face Transformers", level: 90 },
+    { name: "LLM Inference & Serving (vLLM)", level: 75 },
   ],
   color: "from-yellow-500 to-amber-500",
 },
 {
-  title: "Databases & Storage",
+  title: "Databases & AI Storage",
   icon: <Database className="w-8 h-8" />,
   skills: [
+    { name: "Vector Search & Embeddings Storage", level: 90 },
     { name: "MongoDB", level: 85 },
-    { name: "PostgreSQL", level: 80 },
-    { name: "MySQL", level: 80 },
-    { name: "Redis", level: 70 },
-    { name: "Firebase", level: 75 },
+    { name: "Redis (Caching & Session Storage)", level: 75 },
+    { name: "ChromaDB", level: 70 },
+    { name: "Elasticsearch", level: 75 },
   ],
   color: "from-purple-500 to-pink-500",
 },
 {
-  title: "AI Databases & Vector Storage",
-  icon: <Layers className="w-8 h-8" />,
-  skills: [
-    { name: "Pinecone", level: 70 },
-    { name: "Weaviate", level: 65 },
-    { name: "Faiss", level: 85 },
-    { name: "ChromaDB", level: 60 },
-    { name: "Elasticsearch", level: 75 },
-  ],
-  color: "from-violet-500 to-indigo-500",
-},
-{
-  title: "Tools & Automation",
+  title: "Developer Tools & Automation",
   icon: <Zap className="w-8 h-8" />,
   skills: [
-    { name: "Git/GitHub", level: 90 },
-    { name: "VS Code", level: 95 },
-    { name: "Postman", level: 85 },
-    { name: "MLflow", level: 75 },
-    { name: "Automation Scripting (Python/Bash)", level: 80 },
+    { name: "Git & GitHub", level: 90 },
+    { name: "Postman & API Testing", level: 85 },
+    { name: "MLflow & Experiment Tracking", level: 75 },
+    { name: "Python & Bash Automation", level: 80 },
+    { name: "CI/CD (GitHub Actions)", level: 75 },
   ],
   color: "from-rose-500 to-pink-500",
 },
 {
-  title: "Ethics & Future AI",
-  icon: <Globe className="w-8 h-8" />,
+  title: "AI Security & Reliability",
+  icon: <ShieldCheck className="w-8 h-8" />,
   skills: [
-    { name: "AI Ethics & Fairness", level: 75 },
-    { name: "Explainable AI (XAI)", level: 70 },
-    { name: "Bias Detection & Mitigation", level: 65 },
-    { name: "Edge AI", level: 70 },
-    { name: "Quantum AI (Exploration)", level: 60 },
+    { name: "Prompt Injection Defense", level: 75 },
+    { name: "AI Guardrails & Output Validation", level: 80 },
+    { name: "Tool Permissions & Access Control", level: 80 },
+    { name: "LLM Reliability & Failure Handling", level: 80 },
+    { name: "Responsible AI & Data Privacy", level: 75 },
   ],
   color: "from-teal-500 to-green-500",
-},
-{
-  title: "Soft Skills",
-  icon: <Users className="w-8 h-8" />,
-  skills: [
-    { name: "Problem Solving", level: 90 },
-    { name: "Research & Innovation", level: 85 },
-    { name: "Communication", level: 80 },
-    { name: "Collaboration", level: 85 },
-    { name: "Leadership", level: 75 },
-  ],
-  color: "from-pink-500 to-rose-500",
 },
 
   ]
@@ -320,11 +186,11 @@ export default function SkillsPage() {
             </ScrollReveal>
 
             {/* Skills Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               {skillCategories.map((category, categoryIndex) => (
-                <ScrollReveal key={category.title} threshold={0.1}>
+                <ScrollReveal key={category.title} threshold={0.1} className="h-full">
                   <motion.div
-                    className={`p-8 rounded-2xl ${
+                    className={`h-full flex flex-col justify-between p-8 rounded-2xl ${
                       theme === "dark"
                         ? "bg-white/5 border border-white/10 hover:bg-white/10"
                         : "bg-black/5 border border-black/10 hover:bg-black/10"
@@ -342,11 +208,11 @@ export default function SkillsPage() {
                       >
                         <div className="text-white">{category.icon}</div>
                       </motion.div>
-                      <h3 className="text-xl font-bold">{category.title}</h3>
+                      <h3 className="text-xl font-bold min-h-[3.5rem] flex items-center">{category.title}</h3>
                     </div>
 
                     {/* Skills List */}
-                    <div className="space-y-4">
+                    <div className="space-y-4 flex-1 flex flex-col justify-between">
                       {category.skills.map((skill, skillIndex) => (
                         <motion.div
                           key={skill.name}

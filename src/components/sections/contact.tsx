@@ -395,7 +395,7 @@ export default function Contact({ id }: { id?: string }) {
                             className={`text-sm ${theme === "dark" ? "text-gray-500" : "text-gray-400"
                                 }`}
                         >
-                            © 2026 Ajithar. All Rights Reserved.
+                            © 2027 Ajithar. All Rights Reserved.
                         </p>
                     </div>
                 </div>

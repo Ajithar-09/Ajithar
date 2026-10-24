@@ -9,9 +9,10 @@ interface ScrollRevealProps {
   children: React.ReactNode
   threshold?: number
   delay?: number
+  className?: string
 }
 
-export default function ScrollReveal({ children, threshold = 0.2, delay = 0 }: ScrollRevealProps) {
+export default function ScrollReveal({ children, threshold = 0.2, delay = 0, className = "" }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, amount: threshold })
 
@@ -21,6 +22,7 @@ export default function ScrollReveal({ children, threshold = 0.2, delay = 0 }: S
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.8, delay }}
+      className={className}
     >
       {children}
     </motion.div>

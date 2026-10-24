@@ -260,146 +260,146 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-                    <div className="pt-2">
-                      <motion.button
-                        type="submit"
-                        disabled={isLoading}
-                        className={`w-full px-8 py-3.5 rounded-lg font-medium transition-all flex items-center justify-center space-x-2 ${theme === "dark"
-                          ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
-                          : "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600"
-                          }`}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        {isLoading ? (
-                          <>
-                            <Spinner />
-                            <span>Sending...</span>
-                          </>
-                        ) : (
-                          <>
-                            <Send className="w-5 h-5" />
-                            <span>Send Message</span>
-                          </>
-                        )}
-                      </motion.button>
-
-                      {status && (
-                        <p
-                          className={`text-center mt-3 text-sm ${status.startsWith("✅") ? "text-green-500" : "text-red-500"
-                            }`}
-                        >
-                          {status}
-                        </p>
+                  <div className="pt-2">
+                    <motion.button
+                      type="submit"
+                      disabled={isLoading}
+                      className={`w-full px-8 py-3.5 rounded-lg font-medium transition-all flex items-center justify-center space-x-2 ${theme === "dark"
+                        ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
+                        : "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600"
+                        }`}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      {isLoading ? (
+                        <>
+                          <Spinner />
+                          <span>Sending...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5" />
+                          <span>Send Message</span>
+                        </>
                       )}
-                    </div>
-                  </form>
-                </motion.div>
+                    </motion.button>
 
-                {/* Contact Information & Availability Column */}
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="flex flex-col justify-between space-y-6"
+                    {status && (
+                      <p
+                        className={`text-center mt-3 text-sm ${status.startsWith("✅") ? "text-green-500" : "text-red-500"
+                          }`}
+                      >
+                        {status}
+                      </p>
+                    )}
+                  </div>
+                </form>
+              </motion.div>
+
+              {/* Contact Information & Availability Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex flex-col justify-between space-y-6"
+              >
+                {/* Contact Details & Social Links Combined Card */}
+                <div
+                  className={`p-8 rounded-2xl flex-1 flex flex-col justify-between ${theme === "dark"
+                    ? "bg-white/5 border border-white/10"
+                    : "bg-black/5 border border-black/10"
+                    }`}
                 >
-                  {/* Contact Details & Social Links Combined Card */}
-                  <div
-                    className={`p-8 rounded-2xl flex-1 flex flex-col justify-between ${theme === "dark"
-                      ? "bg-white/5 border border-white/10"
-                      : "bg-black/5 border border-black/10"
-                      }`}
-                  >
-                    <div>
-                      <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                      <div className="space-y-4">
-                        {contactInfo.map((info, index) => (
-                          <motion.a
-                            key={info.title}
-                            href={info.href}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                            className={`flex items-center space-x-4 p-3.5 rounded-xl transition-all ${theme === "dark" ? "hover:bg-white/5" : "hover:bg-black/5"
+                  <div>
+                    <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+                    <div className="space-y-4">
+                      {contactInfo.map((info, index) => (
+                        <motion.a
+                          key={info.title}
+                          href={info.href}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                          className={`flex items-center space-x-4 p-3.5 rounded-xl transition-all ${theme === "dark" ? "hover:bg-white/5" : "hover:bg-black/5"
+                            }`}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <div
+                            className={`p-3 rounded-full shrink-0 ${theme === "dark"
+                              ? "bg-gradient-to-r from-purple-600 to-pink-600"
+                              : "bg-gradient-to-r from-purple-500 to-pink-500"
                               }`}
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
                           >
-                            <div
-                              className={`p-3 rounded-full shrink-0 ${theme === "dark"
-                                ? "bg-gradient-to-r from-purple-600 to-pink-600"
-                                : "bg-gradient-to-r from-purple-500 to-pink-500"
-                                }`}
-                            >
-                              <div className="text-white">{info.icon}</div>
-                            </div>
-                            <div>
-                              <h4 className="font-semibold text-sm">{info.title}</h4>
-                              <p className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
-                                {info.value}
-                              </p>
-                            </div>
-                          </motion.a>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Social Links Section Inside Card */}
-                    <div className="pt-6 mt-6 border-t border-white/10">
-                      <h4 className={`text-sm font-semibold uppercase tracking-wider mb-4 ${theme === "dark" ? "text-purple-300" : "text-purple-600"}`}>
-                        Connect With Me
-                      </h4>
-                      <div className="flex flex-wrap gap-3">
-                        {socialLinks.map((social, index) => (
-                          <motion.a
-                            key={social.name}
-                            href={social.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={social.name}
-                            className={`p-3 rounded-full transition-all flex items-center justify-center ${theme === "dark"
-                              ? "bg-white/10 hover:bg-white/20"
-                              : "bg-black/10 hover:bg-black/20"
-                              } ${social.color}`}
-                            whileHover={{ scale: 1.1, y: -2 }}
-                            whileTap={{ scale: 0.95 }}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                          >
-                            {social.icon}
-                          </motion.a>
-                        ))}
-                      </div>
+                            <div className="text-white">{info.icon}</div>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-sm">{info.title}</h4>
+                            <p className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                              {info.value}
+                            </p>
+                          </div>
+                        </motion.a>
+                      ))}
                     </div>
                   </div>
 
-                  {/* Availability Card */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className={`p-6 rounded-2xl text-center ${theme === "dark"
-                      ? "bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20"
-                      : "bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200"
-                      }`}
-                  >
-                    <div className="flex justify-center mb-3">
-                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  {/* Social Links Section Inside Card */}
+                  <div className="pt-6 mt-6 border-t border-white/10">
+                    <h4 className={`text-sm font-semibold uppercase tracking-wider mb-4 ${theme === "dark" ? "text-purple-300" : "text-purple-600"}`}>
+                      Connect With Me
+                    </h4>
+                    <div className="flex flex-wrap gap-3">
+                      {socialLinks.map((social, index) => (
+                        <motion.a
+                          key={social.name}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={social.name}
+                          className={`p-3 rounded-full transition-all flex items-center justify-center ${theme === "dark"
+                            ? "bg-white/10 hover:bg-white/20"
+                            : "bg-black/10 hover:bg-black/20"
+                            } ${social.color}`}
+                          whileHover={{ scale: 1.1, y: -2 }}
+                          whileTap={{ scale: 0.95 }}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                        >
+                          {social.icon}
+                        </motion.a>
+                      ))}
                     </div>
-                    <h3 className="text-xl font-bold mb-1">Available for Work</h3>
-                    <p className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
-                      I'm currently available for freelance projects and full-time opportunities.
-                    </p>
-                  </motion.div>
+                  </div>
+                </div>
+
+                {/* Availability Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className={`p-6 rounded-2xl text-center ${theme === "dark"
+                    ? "bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20"
+                    : "bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200"
+                    }`}
+                >
+                  <div className="flex justify-center mb-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  </div>
+                  <h3 className="text-xl font-bold mb-1">Available for Work</h3>
+                  <p className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                    I'm currently available for freelance projects and full-time opportunities.
+                  </p>
                 </motion.div>
+              </motion.div>
             </div>
             <div className="w-full text-center py-8">
               <p
                 className={`text-sm ${theme === "dark" ? "text-gray-500" : "text-gray-400"
                   }`}
               >
-                © 2026 Ajithar. All Rights Reserved.
+                © 2027 Ajithar. All Rights Reserved.
               </p>
             </div>
           </div>

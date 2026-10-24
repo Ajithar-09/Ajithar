@@ -1,22 +1,17 @@
 import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "./components/theme-provider"
 import Navigation from "./components/navigation"
 import ScrollToTop from "./components/scroll-to-top"
-import Script from "next/script"
 
-const inter = Inter({ subsets: ["latin"] })
-
-export const metadata: Metadata = {
-  title: "Ajithar A - AI Software Engineer Portfolio",
+export const metadata = {
+  title: "Ajithar A - AI/ML Software Engineer Portfolio",
   description:
     "Professional portfolio of Ajithar A, an AI Engineer specializing in Generative AI, Automation AI, Natural Language Processing, Machine Learning, and Computer Vision. Experienced in developing intelligent systems, conversational AI, and scalable AI-driven applications using modern web technologies.",
   keywords: "AI Engineer, Generative AI, Automation AI, Natural Language Processing, Large Language Models, Machine Learning, Deep Learning, Computer Vision, MLOps, Prompt Engineering, LangChain, OpenAI, Groq API, RAG, Artificial Intelligence, AI Portfolio, Intelligent Systems, Conversational AI",
   authors: [{ name: "Ajithar A" }],
   openGraph: {
-    title: "Ajithar A - AI Software Engineer",
+    title: "Ajithar A - AI/ML Software Engineer",
     description: "Professional portfolio showcasing web development projects and skills",
     type: "website",
   },
@@ -30,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+      <body className="font-sans">
         <ThemeProvider defaultTheme="dark">
           {/* Global Background */}
           <div className="fixed inset-0 z-[-1] transition-colors duration-500 bg-white dark:bg-black">
@@ -45,15 +40,16 @@ export default function RootLayout({
         </ThemeProvider>
 
         {/* Chatling Chatbot */}
-        <Script id="chatling-config" strategy="beforeInteractive">
-          {`window.chtlConfig = { chatbotId: "1412735164" }`}
-        </Script>
-        <Script
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.chtlConfig = { chatbotId: "1412735164" };`,
+          }}
+        />
+        <script
           async
           data-id="1412735164"
           id="chtl-script"
           src="https://chatling.ai/js/embed.js"
-          strategy="afterInteractive"
         />
       </body>
     </html>

@@ -17,11 +17,11 @@ export default function ProjectsPage() {
       id: 1,
       title: "Wheather-App",
       description:
-        "A responsive weather application providing real-time forecasts, location-based updates, and personalized insights using modern APIs.",
+        "A responsive weather application providing real time forecasts, location based updates, and personalized insights using modern APIs.",
       longDescription:
-        "The Weather App delivers accurate and up-to-date weather information by integrating real-time data from trusted meteorological APIs. Users can search for any city worldwide or allow GPS-based location tracking for instant weather updates. The app presents forecasts including temperature, humidity, wind speed, sunrise/sunset times, and 7-day predictions in a clean, interactive interface. It also features dark/light mode, weather-based UI animations, and alerts for severe weather conditions. Designed with scalability and user experience in mind, the app can be extended with AI-driven recommendations (e.g., suggesting clothing or travel tips based on weather).",
+        "The Weather App delivers accurate and up to date weather information by integrating real time data from trusted meteorological APIs. Users can search for any city worldwide or allow GPS location tracking for instant weather updates. The app presents forecasts including temperature, humidity, wind speed, sunrise, sunset times, and 7 day predictions in a clean, interactive interface. It also features dark and light mode, dynamic weather animations, and alerts for severe weather conditions. Designed with scalability and user experience in mind, the app can be extended with smart suggestions based on weather conditions.",
       image: "/weather.avif",
-      tech: ["Python", "Speech Recognition", "Natural Language Processing", "Text-to-Speech", "Mapping APIs", "Routing Algorithms", "FastAPI", "Real-time Data Processing"],
+      tech: ["Python", "Speech Recognition", "Natural Language Processing", "Text to Speech", "Mapping APIs", "Routing Algorithms", "FastAPI", "Real Time Data Processing"],
       category: "Completed",
       github: "https://github.com/Ajithar-09/Wheather-App.git",
       demo: "#",
@@ -32,11 +32,11 @@ export default function ProjectsPage() {
       id: 2,
       title: "Smart-Voice-Assistant-using-Jarvis-Controller",
       description:
-        "Smart-Voice-Assistant-using-Jarvis-Control is an AI-powered voice assistant that performs tasks using speech commands, integrating NLP, speech recognition, and text-to-speech for a seamless hands-free experience.",
+        "An AI voice assistant that performs tasks using speech commands, integrating NLP, speech recognition, and text to speech for a smooth hands free experience.",
       longDescription:
-        "Smart-Voice-Assistant-using-Jarvis-Control is an AI-powered personal assistant that enables users to perform tasks using voice commands, similar to the fictional Jarvis system. The assistant integrates speech recognition to interpret user commands, natural language processing (NLP) to understand intent, and text-to-speech (TTS) for real-time audio responses. It can execute tasks such as opening applications, fetching information from the web, managing files, sending emails, setting reminders, and controlling system operations. Built using Python, this project demonstrates the seamless integration of AI, automation, and software engineering to provide a hands-free, intelligent user experience, highlighting the potential of voice-driven interfaces in daily computing.",
+        "Smart Voice Assistant is a personal assistant that enables users to perform everyday tasks using voice commands. The assistant integrates speech recognition to interpret user commands, natural language processing (NLP) to understand intent, and text to speech (TTS) for real time audio responses. It can execute tasks such as opening applications, fetching information from the web, managing files, sending emails, setting reminders, and controlling system operations. Built using Python, this project highlights how voice driven interfaces simplify daily computing.",
       image: "/voice.jpg",
-      tech: ["Python", "Speech Recognition", "Natural Language Processing", "Text-to-Speech", "Web Scraping & API Integration", "Scheduler", "FastAPI", "Real-time Data Processing"],
+      tech: ["Python", "Speech Recognition", "Natural Language Processing", "Text to Speech", "Web Scraping & API Integration", "Scheduler", "FastAPI", "Real Time Data Processing"],
       category: "Completed",
       github: "https://github.com/Ajithar-09/Smart-Voice-Assistant-using-Jarvis-Control.git",
       demo: "#",
@@ -47,11 +47,11 @@ export default function ProjectsPage() {
       id: 3,
       title: "Voice-Map-Navigation",
       description:
-        "Voice-Map-Navigation is an intelligent navigation system that allows users to interact with maps and get directions using voice commands. The project integrates speech recognition, real-time mapping, and turn-by-turn guidance to provide a hands-free, efficient, and user-friendly navigation experience.",
+        "An intelligent navigation system that allows users to interact with maps and get directions using voice commands with turn by turn guidance for a hands free experience.",
       longDescription:
-        "Voice-Map-Navigation is an advanced, voice-controlled navigation system designed to provide users with a seamless and hands-free way to explore and navigate their surroundings. Leveraging state-of-the-art speech recognition technology, the system interprets user commands in real time to offer accurate route guidance, turn-by-turn directions, and location-based suggestions. Integrated with mapping APIs and intelligent algorithms, it can dynamically update routes based on traffic conditions, road closures, or user preferences. This project emphasizes accessibility and convenience, making navigation easier for drivers, pedestrians, and individuals with mobility challenges, while showcasing the potential of voice interfaces in enhancing user experiences in smart navigation systems.",
+        "Voice Map Navigation is a voice controlled navigation system designed to provide users with a simple and hands free way to explore and navigate routes. Leveraging speech recognition technology, the system interprets user commands in real time to offer accurate route guidance, turn by turn directions, and location based suggestions. Integrated with mapping APIs and routing algorithms, it dynamically updates routes based on traffic conditions or user preferences. This project emphasizes accessibility, making navigation easier for drivers and pedestrians alike.",
       image: "/voicemap.jpg",
-      tech: ["Python", "Speech Recognition", "Natural Language Processing", "Text-to-Speech", "Mapping APIs", "Routing Algorithms", "FastAPI", "Real-time Data Processing"],
+      tech: ["Python", "Speech Recognition", "Natural Language Processing", "Text to Speech", "Mapping APIs", "Routing Algorithms", "FastAPI", "Real Time Data Processing"],
       category: "Completed",
       github: "https://github.com/Ajithar-09/Voice-Map-Navigation.git",
       demo: "#",
@@ -62,9 +62,9 @@ export default function ProjectsPage() {
       id: 4,
       title: "Emotion Detection system",
       description:
-        "A machine learning-based system that detects human emotions from facial expressions and text, enabling real-time emotion-aware applications.",
+        "A machine learning based system that detects human emotions from facial expressions and text, enabling real time emotion aware applications.",
       longDescription:
-        "The Emotion Detection System is designed to recognize and classify human emotions such as happiness, sadness, anger, fear, surprise, and neutrality using both facial expression analysis and natural language processing. The project employs deep learning models like CNNs for image-based detection and transformer-based architectures for text sentiment analysis. By combining multi-modal inputs, the system provides highly accurate emotion recognition, making it applicable in domains like healthcare (mental health monitoring), customer service (sentiment-aware chatbots), and human-computer interaction. The system also integrates real-time webcam feeds and audio-to-text pipelines to ensure practical deployment in interactive environments.",
+        "The Emotion Detection System recognizes and classifies human emotions including happiness, sadness, anger, fear, surprise, and neutrality using both facial expression analysis and natural language processing. The project employs deep learning models like CNNs for image classification and transformer architectures for text sentiment analysis. By combining multimodal inputs, the system provides accurate emotion recognition for domains like customer service and mental wellness monitoring, integrating real time webcam feeds and audio to text pipelines.",
       image: "/emotion.webp",
       tech: ["Python", "OpenCV", "TensorFlow", "PyTorch", "CNN", "LSTM", "Transformers (BERT)", "NLP", "Scikit-learn", "Streamlit", "Dlib", "MediaPipe"],
       category: "Completed",
@@ -77,9 +77,9 @@ export default function ProjectsPage() {
       id: 5,
       title: "Movie Booking Analytic system",
       description:
-        "A data-driven analytics system for movie bookings that provides insights into audience preferences, revenue trends, and seat occupancy using advanced visualization and predictive modeling.",
+        "A data driven analytics system for movie bookings that provides insights into audience preferences, revenue trends, and seat occupancy using predictive modeling.",
       longDescription:
-        "The Movie Booking Analytics System is designed to analyze and optimize the movie booking ecosystem by collecting and processing booking data from theaters and online platforms.The system enables stakeholders—cinema owners, distributors, and marketers—to track seat occupancy, ticket sales, peak booking times, user demographics, and genre preferences. Using machine learning models, the platform forecasts demand, identifies popular movie patterns, and provides actionable insights to improve scheduling and promotions.Interactive dashboards and visual reports allow decision-makers to monitor revenue trends, detect underperforming shows, and optimize ticket pricing strategies. By leveraging predictive analytics, the system enhances operational efficiency and ensures better audience engagement.",
+        "The Movie Booking Analytics System analyzes the movie booking ecosystem by collecting and processing booking data from theaters and online platforms. The system enables stakeholders including cinema owners, distributors, and marketers to track seat occupancy, ticket sales, peak booking times, user demographics, and genre preferences. Using machine learning models, the platform forecasts demand and provides actionable insights to improve scheduling and promotions, helping decision makers monitor revenue trends and optimize ticket pricing strategies.",
       image: "/moviebooking.webp",
       tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Tableau", "SQL", "FastAPI", "React", "Docker"],
       category: "Completed",
@@ -92,11 +92,11 @@ export default function ProjectsPage() {
       id: 6,
       title: "Music-Recommended-System",
       description:
-        "An intelligent music recommendation system that suggests personalized tracks to users based on their listening history, mood, and preferences using machine learning techniques.",
+        "An intelligent music recommendation system that suggests personalized tracks to users based on listening history, mood, and preferences using machine learning.",
       longDescription:
-        "The Music Recommendation System leverages advanced machine learning algorithms and natural language processing to analyze user behavior, listening history, and contextual factors such as mood and genre preferences. It implements collaborative filtering and content-based filtering approaches to deliver highly personalized playlists. By combining recommendation models with real-time data processing, the system enhances user engagement and provides a seamless listening experience. The project also explores deep learning techniques for audio feature extraction, enabling recommendations beyond metadata by understanding rhythm, tone, and style.",
+        "The Music Recommendation System leverages machine learning algorithms and natural language processing to analyze user behavior, listening history, and contextual factors such as mood and genre preferences. It implements collaborative filtering and content based filtering approaches to deliver highly personalized playlists. By combining recommendation models with real time data processing, the system enhances user engagement and explores audio feature extraction to recommend tracks based on rhythm, tone, and musical style.",
       image: "/music.webp",
-      tech: ["Python, Scikit-learn, Pandas, NumPy, TensorFlow, Keras, Flask, Spotify API, Natural Language Processing (NLP), Collaborative Filtering, Content-Based Filtering, Streamlit"],
+      tech: ["Python, Scikit-learn, Pandas, NumPy, TensorFlow, Keras, Flask, Spotify API, Natural Language Processing (NLP), Collaborative Filtering, Content Based Filtering, Streamlit"],
       category: "Completed",
       github: "https://github.com/Ajithar-09/Music-Recommender-System.git",
       demo: "#",
@@ -107,11 +107,11 @@ export default function ProjectsPage() {
       id: 7,
       title: "Movie-Recommended-System",
       description:
-        "Movie_Recommended-System is an AI-powered platform that provides personalized movie suggestions using collaborative and content-based filtering techniques.",
+        "An intelligent recommendation platform that provides personalized movie suggestions using collaborative and content based filtering techniques.",
       longDescription:
-        "Movie_Recommended-System is an intelligent recommendation platform designed to provide personalized movie suggestions based on user preferences and viewing history. The system leverages machine learning algorithms, including collaborative filtering and content-based filtering, to analyze user behavior and movie metadata. It incorporates Python for data processing, Pandas/Numpy for analysis, and scikit-learn for building predictive models. The project also features a user-friendly interface where users can rate movies, receive tailored recommendations, and discover new content. This system demonstrates the application of AI and data-driven techniques to enhance user experience in entertainment platforms.",
+        "Movie Recommended System is a platform designed to provide personalized movie suggestions based on user preferences and viewing history. The system leverages machine learning algorithms, including collaborative filtering and content based filtering, to analyze user behavior and movie metadata. Built with Python, Pandas, and scikit learn, it features a clean user interface where users can rate movies, receive tailored recommendations, and discover new titles efficiently.",
       image: "/movie.jpg",
-      tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Collaborative & Content-Based Filtering", "FastAPI", "MongoDB", "Matplotlib"],
+      tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Collaborative & Content Based Filtering", "FastAPI", "MongoDB", "Matplotlib"],
       category: "Completed",
       github: "https://github.com/Ajithar-09/Movie_Recommended-System.git",
       demo: "#",
@@ -122,11 +122,11 @@ export default function ProjectsPage() {
       id: 8,
       title: "face-yolov5",
       description:
-        "face-yolov5 is a real-time face detection system using YOLOv5, PyTorch, and deep learning techniques for accurate and efficient face localization.",
+        "A real time face detection system using YOLOv5, PyTorch, and deep learning techniques for accurate and efficient face localization.",
       longDescription:
-        "face-yolov5 is a real-time face detection system built using the YOLOv5 object detection framework. The project leverages deep learning and computer vision techniques to accurately detect and localize faces in images and video streams. Implemented in Python with PyTorch, it supports real-time processing and can be integrated into applications such as surveillance, access control, or smart attendance systems. The system demonstrates the use of convolutional neural networks (CNNs), bounding box regression, and high-performance inference optimization to deliver fast and precise face detection results.",
+        "face yolov5 is a real time face detection system built using the YOLOv5 object detection framework. The project leverages deep learning and computer vision techniques to detect and localize faces in images and live video streams. Implemented in Python with PyTorch, it supports real time processing and can be integrated into applications such as access control or attendance systems with high performance inference optimization.",
       image: "/yolo.webp",
-      tech: ["Python", "PyTorch", "YOLOv5", "OpenCV", "NumPy", "Computer Vision", "Deep Learning", "Real-time Processing"],
+      tech: ["Python", "PyTorch", "YOLOv5", "OpenCV", "NumPy", "Computer Vision", "Deep Learning", "Real Time Processing"],
       category: "Completed",
       github: "https://github.com/Ajithar-09/face-yolov5.git",
       demo: "#",
@@ -137,9 +137,9 @@ export default function ProjectsPage() {
       id: 9,
       title: "Automatic-Time-Table-Generator",
       description:
-        "Automatic-Time-Table-Generator is an AI-powered system that automatically generates optimized timetables using constraint satisfaction and optimization algorithms.",
+        "An automated system that creates optimized timetables using constraint satisfaction and optimization algorithms.",
       longDescription:
-        "Automatic-Time-Table-Generator is an intelligent scheduling system designed to automatically create optimized timetables for schools, colleges, or organizations. The system leverages constraint satisfaction algorithms, graph coloring techniques, and Python-based optimization libraries to ensure that classes, teachers, and resources are allocated efficiently without conflicts. It includes a user-friendly interface to input constraints, such as teacher availability, room capacity, and course priorities. The project demonstrates practical applications of algorithm design, combinatorial optimization, and software automation, significantly reducing manual effort in timetable creation while ensuring fairness and efficiency.",
+        "Automatic Time Table Generator is a scheduling system designed to automatically create optimized schedules for colleges and schools. The system leverages constraint satisfaction algorithms, graph coloring techniques, and Python optimization libraries to ensure classes, teachers, and rooms are allocated efficiently without conflicts. It includes a user friendly interface to input constraints such as teacher availability and room capacity, significantly reducing manual scheduling effort.",
       image: "/Time Table.webp",
       tech: ["Python", "Constraint Satisfaction", "Graph Coloring Algorithms", "NumPy", "Pandas", "Tkinter", "Scheduling Optimization"],
       category: "Completed",
@@ -152,9 +152,9 @@ export default function ProjectsPage() {
       id: 10,
       title: "Medicinal_plant_identification",
       description:
-        "Medicinal_plant_identification is an AI system that classifies medicinal plants from images using CNNs and deep learning for accurate recognition",
+        "An AI system that classifies medicinal plants from images using CNNs and deep learning for accurate recognition.",
       longDescription:
-        "Medicinal_plant_identification is an AI-powered system designed to recognize and classify medicinal plants from images. The project leverages computer vision and deep learning techniques, using convolutional neural networks (CNNs) for feature extraction and classification. Implemented in Python with frameworks like TensorFlow or PyTorch, the system can accurately identify different plant species and provide relevant medicinal information. It also incorporates image preprocessing, data augmentation, and model optimization to improve accuracy and robustness. This project demonstrates practical applications of AI in healthcare, agriculture, and education by making plant identification faster, more accessible, and reliable.",
+        "Medicinal Plant Identification is a computer vision system designed to recognize and classify medicinal plants from photos. The project uses convolutional neural networks (CNNs) for feature extraction and classification, implemented in Python with TensorFlow and PyTorch. It incorporates image preprocessing and data augmentation to identify plant species accurately and provide relevant botanical and medicinal information.",
       image: "/plant.jpg",
       tech: ["Python", "TensorFlow", "PyTorch", "OpenCV", "CNNs", "Image Preprocessing", "Data Augmentation", "Deep Learning", "FastAPI"],
       category: "Completed",
@@ -169,7 +169,7 @@ export default function ProjectsPage() {
       description:
         "A modern, responsive portfolio website with dynamic animations, theme switching, and optimized performance built with Next.js.",
       longDescription:
-        "This portfolio showcases projects and skills with smooth animations, dark/light theme switching, responsive design, SEO optimization, and fast loading times.",
+        "This portfolio showcases engineering projects and skills with smooth animations, dark and light theme switching, responsive layouts, SEO optimization, and fast loading times.",
       image: "/portfolio.jpg",
       tech: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
       category: "Completed",
@@ -182,9 +182,9 @@ export default function ProjectsPage() {
       id: 12,
       title: "TAAS AI",
       description:
-        "AI-powered database query tool that enables intuitive time sheet and data retrieval through natural language.",
+        "AI powered database query tool that enables intuitive timesheet and data retrieval through natural language queries.",
       longDescription:
-        "Developed an advanced NLP-based database query system that transforms conversational language into precise database queries. The tool intelligently parses user input, understands context, and retrieves accurate timesheet and project data seamlessly. By bridging human-friendly interaction with structured query execution, the system significantly improves usability, efficiency, and accessibility for non-technical users managing organizational data.",
+        "Developed an advanced NLP database query system that transforms conversational language into precise database queries. The tool intelligently parses user input, understands context, and retrieves accurate timesheet and project records from MongoDB. By bridging human friendly interaction with structured query execution, the system helps non technical users explore operational data easily.",
       image: "/Artificial-Intelligence-min.png",
       tech: ["Python","MongoDB", "FastAPI", "spaCy", "Transformers", "NLTK", "OpenAI API", "TensorFlow"],
       category: "Progress",
@@ -197,9 +197,9 @@ export default function ProjectsPage() {
       id: 13,
       title: "AI Career Assistant",
       description:
-        "An AI-powered career guidance platform providing personalized recommendations, skill assessments, and career path suggestions using machine learning.",
+        "An AI career guidance platform providing personalized recommendations, skill assessments, and career path suggestions using machine learning.",
       longDescription:
-        "This innovative platform uses AI to analyze user profiles, provide career recommendations, suggest skill development paths, offer interview preparation, and connect users with relevant opportunities based on their goals and experience.",
+        "This platform uses machine learning to analyze user profiles, provide career recommendations, suggest skill development paths, offer interview preparation, and connect users with relevant opportunities based on their professional goals.",
       image: "/carrer.jpg",
       tech: ["React", "Python", "FastAPI", "OpenAI API", "TensorFlow"],
       category: "Progress",
@@ -212,9 +212,9 @@ export default function ProjectsPage() {
       id: 14,
       title: "RAG with MCP Chatbot",
       description:
-        "An AI-powered chatbot enhanced with Retrieval-Augmented Generation (RAG) and MCP (Model Context Protocol), enabling intelligent, context-aware responses from custom knowledge sources.",
+        "An AI chatbot enhanced with Retrieval Augmented Generation (RAG) and MCP (Model Context Protocol), enabling intelligent, context aware responses from custom knowledge sources.",
       longDescription:
-        "This project implements a next-generation conversational AI system by combining Retrieval-Augmented Generation (RAG) with MCP (Model Context Protocol). Unlike traditional chatbots, it can pull precise, real-time information from structured/unstructured knowledge bases, ensuring accurate and context-rich answers.The RAG pipeline integrates document indexing, embedding generation, and vector database retrieval to provide relevant context to the LLM before generating responses. The MCP layer standardizes communication between external tools, APIs, and the AI model, making the chatbot modular and easily extensible.Key use cases include enterprise knowledge assistants, customer support bots, and AI-driven internal query systems. The chatbot is designed with scalability, accuracy, and adaptability in mind, supporting both natural conversations and task-specific queries.",
+        "This project implements a modern conversational AI system combining Retrieval Augmented Generation (RAG) with MCP (Model Context Protocol). It pulls precise, real time information from custom knowledge bases to generate context rich answers. The RAG pipeline integrates document indexing, embedding generation, and vector retrieval, while the MCP layer standardizes communication between external tools and the language model for enterprise use cases.",
       image: "/rag.webp",
       tech: ["Python", "LangChain", "OpenAI", "MCP (Model Context Protocol)", "Vector Database (FAISS)", "Next.js (frontend)", "Tailwind CSS", "Docker"],
       category: "Progress",
@@ -227,9 +227,9 @@ export default function ProjectsPage() {
       id: 15,
       title: "V-Serve Master",
       description:
-        "An intelligent HR assistant chatbot that answers employee queries on company policies using LangChain’s Pandas Query Engine and integrated open-source LLMs.",
+        "An intelligent HR assistant chatbot that answers employee queries on company policies using LangChain Pandas Query Engine and open source LLMs.",
       longDescription:
-        "V Serve Master is an AI-powered HR support system designed to provide instant and accurate responses to employee queries about HR policies, leave management, payroll, and organizational guidelines. The chatbot leverages LangChain’s Pandas Query Engine to intelligently query structured HR data (spreadsheets, CSVs, or databases) and combines it with open-source LLM integration for natural language understanding and response generation. By merging data-driven querying with conversational AI, employees can simply ask questions in plain language, and the system fetches the right policy or information. This reduces dependency on HR teams, streamlines internal communication, and enhances employee experience.The system is modular, scalable, and can be easily integrated into existing HR portals, Slack, or Microsoft Teams, making it a smart and accessible workplace assistant.",
+        "V Serve Master is an AI support system designed to provide prompt and accurate responses to employee questions about HR policies, leave management, payroll, and guidelines. The chatbot leverages LangChain Pandas Query Engine to query structured HR data and combines it with open source LLMs for natural language understanding. This streamlines internal communication and resolves routine workplace inquiries instantly.",
       image: "/vserve.jpg",
       tech: ["Python", "LangChain", "Pandas Query Engine", "Open-Source LLMs", "Streamlit", "FastAPI", "Docker", "SQL/CSV datasets"],
       category: "Progress",

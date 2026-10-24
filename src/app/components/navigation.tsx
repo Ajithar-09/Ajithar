@@ -1,19 +1,13 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import Link from "next/link" // Use Next.js Link for optimized navigation (even for anchors, or stick to a tag if purely client-side internal nav)
-import { usePathname } from "next/navigation"
+import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Moon, Sun, Laptop } from "lucide-react"
+import { Menu, X, Moon, Sun } from "lucide-react"
 import { useTheme } from "./theme-provider"
-import { Button } from "@/components/ui/button"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
   const { theme, setTheme } = useTheme()
-  const pathname = usePathname()
 
   // Handle scroll for sticky header styling and active section detection
   useEffect(() => {
@@ -77,13 +71,13 @@ export default function Navigation() {
         }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" as const }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link
+            <a
               href="#hero"
               onClick={(e) => scrollToSection(e, "#hero")}
               className={`text-2xl font-bold tracking-tighter hover:scale-105 transition-transform flex items-center ${theme === "dark" ? "text-white" : "text-black"
@@ -94,7 +88,7 @@ export default function Navigation() {
                 A
                 <span className="absolute -top-1 -right-2 w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
               </span>
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -124,16 +118,15 @@ export default function Navigation() {
 
           {/* Theme Toggle & Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <Button
-              variant="ghost"
-              size="icon"
+            <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className={`rounded-full ${theme === "dark" ? "text-white hover:text-white hover:bg-white/20" : "text-black hover:text-black hover:bg-black/10"}`}
+              className={`p-2 rounded-full transition-colors ${theme === "dark" ? "text-white hover:text-white hover:bg-white/20" : "text-black hover:text-black hover:bg-black/10"}`}
+              aria-label="Toggle theme"
             >
               <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
-            </Button>
+            </button>
 
             <div className="md:hidden">
               <button

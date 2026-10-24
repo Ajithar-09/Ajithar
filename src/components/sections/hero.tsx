@@ -111,14 +111,14 @@ export default function Hero({ id }: { id?: string }) {
                                 Ajithar <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">A</span>
                             </h1>
                             <p className={`text-xl md:text-2xl font-medium ${theme === "dark" ? "text-purple-300" : "text-purple-600"}`}>
-                                AI Software Engineer
+                                AI/ML Software Engineer
                             </p>
                         </motion.div>
 
                         {/* Description */}
                         <motion.div variants={itemVariants}>
                             <p className={`text-base md:text-lg max-w-2xl mx-auto leading-relaxed ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-                                Driven by curiosity and innovation, I craft intelligent solutions powered by modern AI from large language models and generative AI to computer vision and deep learning. My focus is on building scalable, future ready systems that bridge data, intelligence, and real-world impact.
+                                I build production ready AI systems with a focus on Retrieval Augmented Generation (RAG), AI agent workflows, and LLM backends. Experienced in engineering scalable FastAPI microservices, vector search pipelines, and reliable evaluation frameworks to solve real world problems.
                             </p>
                         </motion.div>
 

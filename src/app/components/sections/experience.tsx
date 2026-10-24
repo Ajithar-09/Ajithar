@@ -17,65 +17,76 @@ export default function Experience({ id }: { id?: string }) {
     const experiences = [
         {
             id: 1,
-            role: "AI Software Engineer",
+            role: "AI/ML Software Engineer",
             company: "DoubleTap Innovations and Technologies Pvt. Ltd",
             location: "Chennai, Tamil Nadu, India",
             period: "June 2024 - Present",
             type: "Full-time",
             description:
-                "Working as an AI Software Engineer responsible for designing, developing, and deploying scalable machine learning models, natural language processing systems, and generative AI solutions using modern AI technologies.",
+                "Developing and deploying production AI services and LLM powered applications. Focused on building end to end RAG pipelines, FastAPI backends, and agent workflows that automate business processes and structured data extraction.",
             responsibilities: [
-                "Designed, trained, and deployed machine learning and deep learning models for real-world applications",
-                "Developed and fine-tuned large language models (LLMs) and generative AI solutions",
-                "Built and optimized pipelines for data preprocessing, feature engineering, and model evaluation",
-                "Researched and implemented state-of-the-art NLP and computer vision techniques",
-                "Collaborated with cross-functional teams to integrate AI-driven solutions into production systems",
-                "Ensured scalability, performance, and reliability of AI models through MLOps best practices"
+                "Architect and deploy Retrieval Augmented Generation (RAG) pipelines using LangChain, vector embeddings, and LLM APIs for contextual knowledge retrieval",
+                "Develop high performance REST APIs with FastAPI and Docker to serve model inference and agent workflows to client facing web applications",
+                "Implement Natural Language to SQL and MongoDB query engines, translating conversational queries into validated database queries for reporting and analytics",
+                "Build automated document ingestion pipelines: text chunking, embedding generation, semantic caching with Redis, and vector indexing",
+                "Set up AI guardrails, input and output validation, and prompt defenses to prevent hallucinations and ensure reliable model responses",
+                "Containerize backend AI services with Docker and configure CI/CD pipelines for automated testing and deployment"
             ],
             achievements: [
-                "Improved model accuracy by 25% through advanced feature engineering and hyperparameter tuning",
-                "Reduced training time by 40% by optimizing data pipelines and leveraging GPU acceleration",
-                "Deployed end-to-end ML workflows using MLOps practices, cutting model deployment time by 50%",
-                "Developed and fine-tuned LLM-based solutions that enhanced task automation and user engagement"
+                "Engineered an enterprise RAG assistant that cut document search and information retrieval time across internal wikis by over 40%",
+                "Developed an NLP driven database query interface enabling non-technical teams to query timesheet and operations data directly in natural language",
+                "Reduced LLM API latency and token costs by implementing semantic caching and optimized prompt templates",
+                "Implemented structured evaluation pipelines to track hallucination rates and response relevance across model updates"
             ],
-
-            technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face Transformers", "LangChain", "OpenAI", "MLOps", "MongoDB", "AWS", "Azure", "Docker"],
+            technologies: [
+                "Python",
+                "FastAPI",
+                "LangChain",
+                "OpenAI API",
+                "PyTorch",
+                "Hugging Face Transformers",
+                "Docker",
+                "MongoDB",
+                "Redis",
+                "Vector Search",
+                "AWS",
+                "CI/CD"
+            ],
             color: "from-purple-600 to-pink-600",
         },
-
         {
             id: 2,
-            role: "AI Software Engineer Intern",
+            role: "AI/ML Software Developer Intern",
             company: "TabSquare InfoTech Private Limited",
             location: "Chennai, Tamil Nadu, India",
             period: "April 2024 - May 2024",
             type: "Internship",
             description:
-                "Worked as an AI Software Engineer Intern, focusing on hands-on implementation of machine learning models, data pipelines, and AI-powered features under production guidance.",
+                "Collaborated with senior engineers on machine learning model development, data preprocessing pipelines, and proof of concept AI prototypes for NLP applications.",
             responsibilities: [
-                "Assisted in building and training machine learning and deep learning models",
-                "Implemented data preprocessing and feature engineering pipelines",
-                "Worked with NLP and generative AI models for internal tools and prototypes",
-                "Integrated trained models into backend services for testing and validation",
-                "Collaborated with senior engineers to debug, optimize, and improve model performance"
+                "Cleaned, validated, and preprocessed text datasets for model fine tuning and sentiment classification benchmarks",
+                "Built and evaluated baseline machine learning models using Scikit-learn and PyTorch",
+                "Developed prototype NLP inference endpoints using FastAPI and tested them with Postman",
+                "Conducted model performance evaluations comparing accuracy, inference latency, and memory consumption",
+                "Documented experimental findings, model metrics, and data preprocessing steps for team review"
             ],
             achievements: [
-                "Contributed to production-ready ML components used in internal applications",
-                "Improved data preprocessing efficiency through optimized scripts",
-                "Gained hands-on experience with LLMs, model fine-tuning, and deployment workflows"
+                "Automated repetitive data cleaning workflows with custom Python scripts, reducing dataset preparation time by 50%",
+                "Successfully benchmarked multiple open source transformer models to determine the optimal speed and accuracy tradeoff for internal tools",
+                "Delivered working API prototypes integrated into test frontends for internal stakeholder demos"
             ],
             technologies: [
                 "Python",
                 "PyTorch",
                 "Scikit-learn",
                 "Hugging Face Transformers",
-                "LangChain",
-                "Docker",
+                "FastAPI",
+                "Pandas",
+                "NumPy",
                 "MongoDB"
             ],
             color: "from-indigo-500 to-purple-500",
         },
-
         {
             id: 3,
             role: "Electronics Engineer",
@@ -84,30 +95,29 @@ export default function Experience({ id }: { id?: string }) {
             period: "2019 - 2021",
             type: "Full-time",
             description:
-                "Worked as an Electronics Engineer focusing on testing, assembling, and maintaining electronic systems and components while ensuring product quality and performance. Gained strong hands-on experience in hardware troubleshooting and practical applications of electrical engineering concepts.",
+                "Conducted functional testing, hardware diagnostics, and quality inspection on electronic circuit assemblies and PCB modules in a high volume manufacturing environment.",
             responsibilities: [
-                "Assembled, tested, and maintained electronic components and circuit boards for production systems",
-                "Performed quality inspections and functional testing on electronic devices to ensure reliability and compliance with industry standards",
-                "Assisted in diagnosing and repairing electronic and electrical faults in manufacturing units",
-                "Collaborated with senior engineers to improve testing procedures and optimize assembly efficiency",
-                "Maintained detailed documentation of test results and system performance reports"
+                "Tested electronic circuits and PCB assemblies using digital multimeters, oscilloscopes, and automated test fixtures",
+                "Diagnosed hardware faults, short circuits, and component failures down to the board level",
+                "Ensured manufactured batches strictly adhered to electrical safety standards and client quality specifications",
+                "Collaborated with production and quality engineers to optimize testing procedures and minimize line bottlenecks",
+                "Maintained comprehensive test logs, defect logs, and calibration records for production equipment"
             ],
             achievements: [
-                "Contributed to improving testing efficiency by 20% through process optimization",
-                "Successfully maintained zero-defect tolerance for multiple production batches",
-                "Recognized by supervisors for strong attention to detail and teamwork in production line operations"
+                "Maintained consistent zero defect delivery standards across multiple high volume production batches",
+                "Identified recurring component solder defects, collaborating with line supervisors to improve first pass testing yield by 20%",
+                "Recognized for meticulous troubleshooting, root cause analysis, and adherence to production schedules"
             ],
             technologies: [
-                "Multimeters",
+                "Digital Multimeters",
                 "Oscilloscopes",
-                "PCB Testing Tools",
+                "PCB Testing Fixtures",
                 "Soldering Equipment",
-                "Electrical Circuit Design",
-                "Quality Control Systems"
+                "Circuit Troubleshooting",
+                "Quality Assurance (QA)"
             ],
             color: "from-yellow-500 to-orange-500"
         },
-
         {
             id: 4,
             role: "Technician",
@@ -116,29 +126,28 @@ export default function Experience({ id }: { id?: string }) {
             period: "2018 - 2019",
             type: "Full-time",
             description:
-                "Worked as a Technician responsible for assembly, maintenance, and testing of automotive components in a fast-paced production environment. Gained strong hands-on experience in quality control, electrical systems, and mechanical assembly operations.",
+                "Operated automated assembly and testing stations, conducted dimensional quality checks, and performed routine maintenance on automotive component lines.",
             responsibilities: [
-                "Performed assembly and maintenance of automotive suspension and exhaust systems",
-                "Conducted regular inspections to ensure all components met quality and performance standards",
-                "Assisted in troubleshooting mechanical and electrical issues during production line operations",
-                "Collaborated with engineers and supervisors to improve assembly processes and minimize downtime",
-                "Maintained detailed logs of maintenance activities and production reports"
+                "Assembled and tested automotive suspension and exhaust components on fast paced production lines",
+                "Performed regular quality inspections and dimensional tolerance checks using precision measurement tools",
+                "Troubleshot pneumatic, mechanical, and electrical station faults to minimize assembly line downtime",
+                "Adhered to 5S methodology, industrial safety standards, and standard operating procedures (SOPs)",
+                "Recorded daily production output figures, scrap counts, and equipment maintenance status"
             ],
             achievements: [
-                "Helped reduce component rejection rate by 15% through improved quality checks",
-                "Recognized for consistent work performance and teamwork on the production floor",
-                "Contributed to achieving daily production targets with high efficiency and accuracy"
+                "Reduced component rejection rate by 15% through proactive inspection and early defect identification",
+                "Consistently met daily shift production targets with zero reported assembly safety incidents",
+                "Assisted maintenance teams during planned equipment overhauls, speeding up changeover times"
             ],
             technologies: [
-                "Automotive Assembly Tools",
-                "Electrical Testing Equipment",
-                "Mechanical Maintenance",
-                "Quality Control Systems",
-                "Production Line Optimization"
+                "Precision Measurement Gauges",
+                "Assembly Fixtures",
+                "Pneumatic and Electrical Controls",
+                "Preventive Maintenance",
+                "5S and Industrial Safety"
             ],
             color: "from-blue-500 to-teal-500"
         }
-
     ]
 
     return (

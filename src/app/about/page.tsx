@@ -28,7 +28,7 @@ export default function AboutPage() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   }
@@ -36,37 +36,45 @@ export default function AboutPage() {
   const timelineData = [
     {
       year: "2024",
-      title: "AI Software Engineer",
+      title: "AI/ML Software Engineer",
       company: "DoubleTap Innovations and Technologies Pvt. Ltd",
-      description: "Leading development of scalable AI solutions and intelligent applications using modern technologies..",
+      description: "Building production RAG pipelines, FastAPI AI microservices, and LLM powered applications for business process automation.",
       current: true,
+    },
+    {
+      year: "April - May 2024",
+      title: "AI/ML Software Developer Intern",
+      company: "TabSquare InfoTech Private Limited",
+      description:
+        "Assisted in preprocessing datasets, experimenting with transformer models, and building prototype NLP endpoints using FastAPI.",
+      current: false,
     },
     {
       year: "2021-2024",
       title: "Bachelor of Technology",
       company: "Mepco Schlenk Engineering College",
-      description: "Artificial Intelligence and Data Science",
+      description: "Artificial Intelligence and Data Science covering machine learning algorithms, deep learning, and software engineering principles.",
       current: false,
     },
     {
       year: "2019-2021",
       title: "Engineer",
       company: "TVS Electronics pvt Ltd",
-      description: "Passionate Electrical and Electronics Engineering diploma holder dedicated to teaching and mentoring future engineers through practical, real-world learning.",
+      description: "Conducted functional board testing, circuit diagnostics, and quality inspection for high volume electronic component manufacturing.",
       current: false,
     },
     {
       year: "2018-2019",
       title: "Technician",
       company: "Tenneco Automotive India Pvt Ltd",
-      description: "Passionate Electrical and Electronics Engineering diploma holder dedicated to teaching and mentoring future engineers through practical, real-world learning.",
+      description: "Operated automated assembly lines and conducted dimensional quality checks on automotive exhaust and suspension components.",
       current: false,
     },
     {
       year: "2015-2018",
       title: "Diploma",
       company: "Government Polytechnic College",
-      description: "Electrical and Electronics Engineering",
+      description: "Electrical and Electronics Engineering with practical training in circuit theory, testing instruments, and industrial electronics.",
       current: false,
     },
   ]
@@ -74,9 +82,8 @@ export default function AboutPage() {
   return (
     <PageTransition>
       <div
-        className={`min-h-screen transition-colors duration-500 ${
-          theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-        }`}
+        className={`min-h-screen transition-colors duration-500 ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+          }`}
       >
         <Navigation />
         <ThemeToggle />
@@ -113,17 +120,15 @@ export default function AboutPage() {
                 className="space-y-6 sm:space-y-8"
               >
                 <div
-                  className={`p-6 sm:p-8 rounded-2xl ${
-                    theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
-                  }`}
+                  className={`p-6 sm:p-8 rounded-2xl ${theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
+                    }`}
                 >
                   <div className="flex items-center space-x-4 mb-4 sm:mb-6">
                     <div
-                      className={`p-2 sm:p-3 rounded-full ${
-                        theme === "dark"
+                      className={`p-2 sm:p-3 rounded-full ${theme === "dark"
                           ? "bg-gradient-to-r from-purple-600 to-pink-600"
                           : "bg-gradient-to-r from-purple-500 to-pink-500"
-                      }`}
+                        }`}
                     >
                       <User className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
@@ -151,24 +156,22 @@ export default function AboutPage() {
                 </div>
 
                 <div
-                  className={`p-6 sm:p-8 rounded-2xl ${
-                    theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
-                  }`}
+                  className={`p-6 sm:p-8 rounded-2xl ${theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
+                    }`}
                 >
                   <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">My Story</h3>
                   <div
-                    className={`space-y-3 sm:space-y-4 text-sm sm:text-base leading-relaxed ${
-                      theme === "dark" ? "text-gray-300" : "text-gray-600"
-                    }`}
+                    className={`space-y-3 sm:space-y-4 text-sm sm:text-base leading-relaxed ${theme === "dark" ? "text-gray-300" : "text-gray-600"
+                      }`}
                   >
                     <p>
-                      I'm a passionate AI Software Engineer with a strong foundation in computer science and expertise across modern AI domains, including machine learning, deep learning, natural language processing, computer vision, and generative AI. My journey in technology began during my undergraduate studies, where I discovered my passion for building intelligent systems, solving real-world problems, and creating impactful AI-driven solutions.
+                      I am an AI/ML Software Engineer specializing in building practical, production ready AI systems. My work focuses on Retrieval Augmented Generation (RAG), conversational agent workflows, and connecting large language models with enterprise databases through clean, testable FastAPI services.
                     </p>
                     <p>
-                      During my academic journey at Mepco Schlenk Engineering College, I gained a strong foundation in software engineering principles, data structures, and algorithms. This knowledge not only sharpened my problem-solving skills but also prepared me to tackle complex challenges and develop scalable, AI-driven applications.
+                      My journey began in electronics engineering, where I spent several years working in hardware diagnostics and manufacturing quality control at TVS Electronics and Tenneco. That background instilled a disciplined troubleshooting mindset and a strict respect for reliability. Transitioning into Artificial Intelligence and Data Science at Mepco Schlenk Engineering College, I applied that engineering foundation toward machine learning algorithms, data engineering, and modern NLP architectures.
                     </p>
                     <p>
-                      Currently working at DoubleTap Innovations and Technologies Pvt. Ltd, I specialize in developing AI-driven solutions, including machine learning models, natural language processing, computer vision, and generative AI applications. I focus on building scalable, intelligent systems while staying updated with the latest advancements in artificial intelligence and industry best practices.
+                      At DoubleTap Innovations, I take AI features from initial architecture all the way to production. This includes building vector retrieval pipelines, connecting LLMs to business databases, optimizing response latency, and setting up output guardrails. I focus on building dependable software where accuracy, speed, and infrastructure cost stay balanced.
                     </p>
                   </div>
                 </div>
@@ -182,17 +185,15 @@ export default function AboutPage() {
                 className="space-y-6 sm:space-y-8"
               >
                 <div
-                  className={`p-6 sm:p-8 rounded-2xl ${
-                    theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
-                  }`}
+                  className={`p-6 sm:p-8 rounded-2xl ${theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
+                    }`}
                 >
                   <div className="flex items-center space-x-4 mb-6 sm:mb-8">
                     <div
-                      className={`p-2 sm:p-3 rounded-full ${
-                        theme === "dark"
+                      className={`p-2 sm:p-3 rounded-full ${theme === "dark"
                           ? "bg-gradient-to-r from-purple-600 to-pink-600"
                           : "bg-gradient-to-r from-purple-500 to-pink-500"
-                      }`}
+                        }`}
                     >
                       <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
@@ -201,11 +202,10 @@ export default function AboutPage() {
 
                   <div className="relative">
                     <div
-                      className={`absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 ${
-                        theme === "dark"
+                      className={`absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 ${theme === "dark"
                           ? "bg-gradient-to-b from-purple-600 to-pink-600"
                           : "bg-gradient-to-b from-purple-500 to-pink-500"
-                      }`}
+                        }`}
                     ></div>
 
                     {timelineData.map((item, index) => (
@@ -217,37 +217,33 @@ export default function AboutPage() {
                         className="relative pl-12 sm:pl-16 pb-8 sm:pb-12 last:pb-0"
                       >
                         <div
-                          className={`absolute left-3 sm:left-4 w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
-                            item.current
+                          className={`absolute left-3 sm:left-4 w-3 h-3 sm:w-4 sm:h-4 rounded-full ${item.current
                               ? theme === "dark"
                                 ? "bg-gradient-to-r from-purple-600 to-pink-600"
                                 : "bg-gradient-to-r from-purple-500 to-pink-500"
                               : theme === "dark"
                                 ? "bg-gray-600"
                                 : "bg-gray-400"
-                          }`}
+                            }`}
                         ></div>
 
                         <div
-                          className={`p-4 sm:p-6 rounded-xl ${
-                            theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
-                          }`}
+                          className={`p-4 sm:p-6 rounded-xl ${theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
+                            }`}
                         >
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                             <span
-                              className={`text-xs sm:text-sm font-medium px-2 sm:px-3 py-1 rounded-full mb-2 sm:mb-0 inline-block ${
-                                theme === "dark"
+                              className={`text-xs sm:text-sm font-medium px-2 sm:px-3 py-1 rounded-full mb-2 sm:mb-0 inline-block ${theme === "dark"
                                   ? "bg-purple-600/20 text-purple-300"
                                   : "bg-purple-500/20 text-purple-600"
-                              }`}
+                                }`}
                             >
                               {item.year}
                             </span>
                             {item.current && (
                               <span
-                                className={`text-xs px-2 py-1 rounded-full inline-block ${
-                                  theme === "dark" ? "bg-green-600/20 text-green-300" : "bg-green-500/20 text-green-600"
-                                }`}
+                                className={`text-xs px-2 py-1 rounded-full inline-block ${theme === "dark" ? "bg-green-600/20 text-green-300" : "bg-green-500/20 text-green-600"
+                                  }`}
                               >
                                 Current
                               </span>
