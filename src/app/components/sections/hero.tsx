@@ -118,7 +118,7 @@ export default function Hero({ id }: { id?: string }) {
                         {/* Description */}
                         <motion.div variants={itemVariants}>
                             <p className={`text-base md:text-lg max-w-2xl mx-auto leading-relaxed ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-                                I build production ready AI systems with a focus on Retrieval Augmented Generation (RAG), AI agent workflows, and LLM backends. Experienced in engineering scalable FastAPI microservices, vector search pipelines, and reliable evaluation frameworks to solve real world problems.
+                                Driven by innovation and a passion for problem-solving, turning ideas into intelligent, practical solutions. Dedicated to tackling complex challenges and building reliable technology with real-world impact.
                             </p>
                         </motion.div>
 
@@ -126,7 +126,7 @@ export default function Hero({ id }: { id?: string }) {
                         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
                             <a
                                 href="/Ajithar Resume.pdf"
-                                download
+                                download="Ajithar - AI-ML Engineer.pdf"
                                 className="px-6 py-2 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
                             >
                                 Download Resume

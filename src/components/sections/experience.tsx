@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { Calendar, MapPin, Briefcase, Award, ChevronRight } from "lucide-react"
+import { Calendar, MapPin, Briefcase, Award, ChevronRight, Users } from "lucide-react"
 import { useTheme } from "../theme-provider"
 import ScrollReveal from "../scroll-reveal"
 
@@ -20,131 +20,123 @@ export default function Experience({ id }: { id?: string }) {
             role: "AI/ML Software Engineer",
             company: "DoubleTap Innovations and Technologies Pvt. Ltd",
             location: "Chennai, Tamil Nadu, India",
-            period: "June 2024 - Present",
+            period: "Jun 2024 - Present",
             type: "Full-time",
             description:
-                "Developing and deploying production AI services and LLM powered applications. Focused on building end to end RAG pipelines, FastAPI backends, and agent workflows that automate business processes and structured data extraction.",
+                "Develop and maintain AI powered backend features across recruitment, retail automation, wellness, video preparation, and task management applications.",
             responsibilities: [
-                "Architect and deploy Retrieval Augmented Generation (RAG) pipelines using LangChain, vector embeddings, and LLM APIs for contextual knowledge retrieval",
-                "Develop high performance REST APIs with FastAPI and Docker to serve model inference and agent workflows to client facing web applications",
-                "Implement Natural Language to SQL and MongoDB query engines, translating conversational queries into validated database queries for reporting and analytics",
-                "Build automated document ingestion pipelines: text chunking, embedding generation, semantic caching with Redis, and vector indexing",
-                "Set up AI guardrails, input and output validation, and prompt defenses to prevent hallucinations and ensure reliable model responses",
-                "Containerize backend AI services with Docker and configure CI/CD pipelines for automated testing and deployment"
+                "Develop and maintain AI powered backend features across recruitment, retail automation, wellness, video preparation, and task management applications",
+                "Lead the AI workstream for an assigned project, coordinate implementation activities, and guide junior developers on technical tasks and development practices",
+                "Integrate machine learning models and LLM APIs into FastAPI services, including input validation, structured responses, asynchronous workflows, and error handling",
+                "Build and troubleshoot real time processing workflows using WebSockets, including image frame processing, session management, and event handling",
+                "Develop AI token usage and cost reporting workflows covering usage aggregation, credit monitoring, cost analysis, and Excel report generation",
+                "Investigate production issues, validate end to end integrations, and support deployment and release workflows using Docker"
             ],
             achievements: [
-                "Engineered an enterprise RAG assistant that cut document search and information retrieval time across internal wikis by over 40%",
-                "Developed an NLP driven database query interface enabling non-technical teams to query timesheet and operations data directly in natural language",
-                "Reduced LLM API latency and token costs by implementing semantic caching and optimized prompt templates",
-                "Implemented structured evaluation pipelines to track hallucination rates and response relevance across model updates"
+                "Led AI workstream activities and mentored junior developers across multiple product deliveries",
+                "Engineered scalable real time WebSocket pipelines handling image frame processing and event streaming",
+                "Developed centralized AI token usage aggregation and automated cost reporting in USD & INR with low-credit alerts",
+                "Shipped robust production AI services across 5+ enterprise platforms with Docker containerization"
             ],
             technologies: [
                 "Python",
                 "FastAPI",
-                "LangChain",
-                "OpenAI API",
-                "PyTorch",
-                "Hugging Face Transformers",
+                "Computer Vision",
+                "OCR",
+                "LLM APIs",
+                "Speech Processing",
+                "WebSockets",
                 "Docker",
                 "MongoDB",
                 "Redis",
-                "Vector Search",
-                "AWS",
-                "CI/CD"
+                "Cloudflare R2"
             ],
             color: "from-purple-600 to-pink-600",
         },
         {
             id: 2,
-            role: "AI/ML Software Developer Intern",
+            role: "AI Software Intern",
             company: "TabSquare InfoTech Private Limited",
             location: "Chennai, Tamil Nadu, India",
             period: "April 2024 - May 2024",
             type: "Internship",
             description:
-                "Collaborated with senior engineers on machine learning model development, data preprocessing pipelines, and proof of concept AI prototypes for NLP applications.",
+                "Assisted with software development, application testing, and debugging to support reliable application functionality.",
             responsibilities: [
-                "Cleaned, validated, and preprocessed text datasets for model fine tuning and sentiment classification benchmarks",
-                "Built and evaluated baseline machine learning models using Scikit-learn and PyTorch",
-                "Developed prototype NLP inference endpoints using FastAPI and tested them with Postman",
-                "Conducted model performance evaluations comparing accuracy, inference latency, and memory consumption",
-                "Documented experimental findings, model metrics, and data preprocessing steps for team review"
+                "Assisted with software development, application testing, and debugging to support reliable application functionality",
+                "Worked with existing application workflows and backend components to understand feature implementation and system behaviour",
+                "Supported API testing and validation to identify issues and verify expected responses",
+                "Collaborated with team members to troubleshoot technical issues and complete assigned development tasks"
             ],
             achievements: [
-                "Automated repetitive data cleaning workflows with custom Python scripts, reducing dataset preparation time by 50%",
-                "Successfully benchmarked multiple open source transformer models to determine the optimal speed and accuracy tradeoff for internal tools",
-                "Delivered working API prototypes integrated into test frontends for internal stakeholder demos"
+                "Conducted comprehensive API testing and endpoint validation, ensuring high service reliability",
+                "Collaborated seamlessly with senior engineers to resolve backend integration blockers",
+                "Gained deep hands-on expertise in production software development and debugging workflows"
             ],
             technologies: [
                 "Python",
-                "PyTorch",
-                "Scikit-learn",
-                "Hugging Face Transformers",
                 "FastAPI",
-                "Pandas",
-                "NumPy",
-                "MongoDB"
+                "API Testing",
+                "Backend Workflows",
+                "Debugging",
+                "Postman",
+                "Git"
             ],
             color: "from-indigo-500 to-purple-500",
         },
         {
             id: 3,
-            role: "Electronics Engineer",
-            company: "TVS Electronics Pvt. Ltd",
-            location: "Hosur, Tamil Nadu, India",
-            period: "2019 - 2021",
+            role: "Technician",
+            company: "Lampex Electronics Limited",
+            location: "Chennai, Tamil Nadu, India",
+            period: "Jun 2019 - Jun 2021",
             type: "Full-time",
             description:
-                "Conducted functional testing, hardware diagnostics, and quality inspection on electronic circuit assemblies and PCB modules in a high volume manufacturing environment.",
+                "Operated manufacturing equipment involved in the production and assembly of LCD/LCM display modules and electronic components.",
             responsibilities: [
-                "Tested electronic circuits and PCB assemblies using digital multimeters, oscilloscopes, and automated test fixtures",
-                "Diagnosed hardware faults, short circuits, and component failures down to the board level",
-                "Ensured manufactured batches strictly adhered to electrical safety standards and client quality specifications",
-                "Collaborated with production and quality engineers to optimize testing procedures and minimize line bottlenecks",
-                "Maintained comprehensive test logs, defect logs, and calibration records for production equipment"
+                "Operated manufacturing equipment involved in the production and assembly of LCD/LCM display modules and electronic components",
+                "Maintained assembly line operations and conducted regular functional diagnostics on electronic modules",
+                "Ensured strict quality assurance, adherence to industrial safety standards, and defect-free production runs"
             ],
             achievements: [
-                "Maintained consistent zero defect delivery standards across multiple high volume production batches",
-                "Identified recurring component solder defects, collaborating with line supervisors to improve first pass testing yield by 20%",
-                "Recognized for meticulous troubleshooting, root cause analysis, and adherence to production schedules"
+                "Maintained high precision assembly standards across high-volume LCD/LCM production lines",
+                "Proactively identified assembly errors and equipment issues to minimize downtime",
+                "Developed disciplined hardware diagnostics and systematic troubleshooting foundations"
             ],
             technologies: [
-                "Digital Multimeters",
-                "Oscilloscopes",
-                "PCB Testing Fixtures",
-                "Soldering Equipment",
-                "Circuit Troubleshooting",
-                "Quality Assurance (QA)"
+                "LCD/LCM Assembly",
+                "Manufacturing Equipment",
+                "Electronic Components",
+                "Quality Inspection",
+                "Hardware Diagnostics"
             ],
             color: "from-yellow-500 to-orange-500"
         },
         {
             id: 4,
-            role: "Technician",
-            company: "Tenneco Automotive India Pvt. Ltd",
+            role: "Junior Technician",
+            company: "Tenneco Automotive India",
             location: "Hosur, Tamil Nadu, India",
-            period: "2018 - 2019",
+            period: "Jun 2018 - Jun 2019",
             type: "Full-time",
             description:
-                "Operated automated assembly and testing stations, conducted dimensional quality checks, and performed routine maintenance on automotive component lines.",
+                "Operated manufacturing machines used in the production of automotive shock absorbers and suspension components for vehicle manufacturers.",
             responsibilities: [
-                "Assembled and tested automotive suspension and exhaust components on fast paced production lines",
-                "Performed regular quality inspections and dimensional tolerance checks using precision measurement tools",
-                "Troubleshot pneumatic, mechanical, and electrical station faults to minimize assembly line downtime",
-                "Adhered to 5S methodology, industrial safety standards, and standard operating procedures (SOPs)",
-                "Recorded daily production output figures, scrap counts, and equipment maintenance status"
+                "Operated manufacturing machines used in the production of automotive shock absorbers and suspension components for vehicle manufacturers",
+                "Performed regular machine checks, dimensional tolerance inspections, and line maintenance support",
+                "Adhered strictly to industrial safety protocols, 5S standards, and quality operating guidelines"
             ],
             achievements: [
-                "Reduced component rejection rate by 15% through proactive inspection and early defect identification",
-                "Consistently met daily shift production targets with zero reported assembly safety incidents",
-                "Assisted maintenance teams during planned equipment overhauls, speeding up changeover times"
+                "Consistently met manufacturing quotas with zero safety incidents",
+                "Assisted in equipment changeover and operational quality verification",
+                "Strengthened engineering rigor and manufacturing process understanding"
             ],
             technologies: [
-                "Precision Measurement Gauges",
-                "Assembly Fixtures",
-                "Pneumatic and Electrical Controls",
-                "Preventive Maintenance",
-                "5S and Industrial Safety"
+                "Automated Machinery",
+                "Shock Absorbers",
+                "Suspension Systems",
+                "Quality Control",
+                "5S Safety"
             ],
             color: "from-blue-500 to-teal-500"
         }
@@ -353,6 +345,105 @@ export default function Experience({ id }: { id?: string }) {
                             </ScrollReveal>
                         ))}
                     </div>
+ 
+                     {/* Leadership, Training & Certifications */}
+                     <ScrollReveal>
+                         <div className="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                             {/* Leadership & Training */}
+                             <motion.div
+                                 initial={{ opacity: 0, y: 20 }}
+                                 whileInView={{ opacity: 1, y: 0 }}
+                                 viewport={{ once: true }}
+                                 transition={{ duration: 0.6 }}
+                                 className={`p-8 rounded-2xl ${
+                                     theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
+                                 } shadow-lg`}
+                             >
+                                 <div className="flex items-center space-x-3 mb-6">
+                                     <div className="p-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                                         <Users className="w-6 h-6" />
+                                     </div>
+                                     <h3 className="text-xl font-bold">Leadership & Engagement</h3>
+                                 </div>
+                                 <ul className="space-y-4">
+                                     <li className="flex items-start space-x-3">
+                                         <ChevronRight className={`w-5 h-5 mt-0.5 flex-shrink-0 ${theme === "dark" ? "text-purple-400" : "text-purple-600"}`} />
+                                         <div>
+                                             <span className="font-semibold block">AI Project Lead</span>
+                                             <span className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                                                 Led AI development activities for assigned projects and mentored junior developers.
+                                             </span>
+                                         </div>
+                                     </li>
+                                     <li className="flex items-start space-x-3">
+                                         <ChevronRight className={`w-5 h-5 mt-0.5 flex-shrink-0 ${theme === "dark" ? "text-purple-400" : "text-purple-600"}`} />
+                                         <div>
+                                             <span className="font-semibold block">Hackathon Judge — SRM College, Chennai</span>
+                                             <span className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                                                 Evaluated participant solutions at an AI related hackathon.
+                                             </span>
+                                         </div>
+                                     </li>
+                                     <li className="flex items-start space-x-3">
+                                         <ChevronRight className={`w-5 h-5 mt-0.5 flex-shrink-0 ${theme === "dark" ? "text-purple-400" : "text-purple-600"}`} />
+                                         <div>
+                                             <span className="font-semibold block">AI/ML Trainer — DoubleTap Innovations</span>
+                                             <span className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                                                 Delivered hands-on AI/ML training to interns and course participants.
+                                             </span>
+                                         </div>
+                                     </li>
+                                 </ul>
+                             </motion.div>
+
+                             {/* Certifications */}
+                             <motion.div
+                                 initial={{ opacity: 0, y: 20 }}
+                                 whileInView={{ opacity: 1, y: 0 }}
+                                 viewport={{ once: true }}
+                                 transition={{ duration: 0.6, delay: 0.2 }}
+                                 className={`p-8 rounded-2xl ${
+                                     theme === "dark" ? "bg-white/5 border border-white/10" : "bg-black/5 border border-black/10"
+                                 } shadow-lg`}
+                             >
+                                 <div className="flex items-center space-x-3 mb-6">
+                                     <div className="p-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
+                                         <Award className="w-6 h-6" />
+                                     </div>
+                                     <h3 className="text-xl font-bold">Certifications</h3>
+                                 </div>
+                                 <ul className="space-y-4">
+                                     <li className="flex items-start space-x-3">
+                                         <ChevronRight className={`w-5 h-5 mt-0.5 flex-shrink-0 ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`} />
+                                         <div>
+                                             <span className="font-semibold block">Natural Language Processing</span>
+                                             <span className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                                                 NPTEL (IIT Kharagpur)
+                                            </span>
+                                         </div>
+                                     </li>
+                                     <li className="flex items-start space-x-3">
+                                         <ChevronRight className={`w-5 h-5 mt-0.5 flex-shrink-0 ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`} />
+                                         <div>
+                                             <span className="font-semibold block">Data Science for Engineers</span>
+                                             <span className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                                                 NPTEL (IIT Madras)
+                                            </span>
+                                         </div>
+                                     </li>
+                                     <li className="flex items-start space-x-3">
+                                         <ChevronRight className={`w-5 h-5 mt-0.5 flex-shrink-0 ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`} />
+                                         <div>
+                                             <span className="font-semibold block">Introduction to Machine Learning</span>
+                                             <span className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+                                                 NPTEL (IIT Kharagpur)
+                                            </span>
+                                         </div>
+                                     </li>
+                                 </ul>
+                             </motion.div>
+                         </div>
+                     </ScrollReveal>
 
                     {/* Call to Action */}
                     {/* Removed Contact Me link as it will be on the same page */}

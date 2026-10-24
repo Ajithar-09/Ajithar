@@ -31,44 +31,44 @@ export default function About({ id }: { id?: string }) {
 
     const timelineData = [
         {
-            year: "2024",
+            year: "Jun 2024 - Present",
             title: "AI/ML Software Engineer",
             company: "DoubleTap Innovations and Technologies Pvt. Ltd",
-            description: "Building production RAG pipelines, FastAPI AI microservices, and LLM powered applications for business process automation.",
+            description: "Developing and maintaining AI powered backend features across recruitment, retail automation, wellness, video preparation, and task management applications.",
             current: true,
         },
         {
             year: "April - May 2024",
-            title: "AI/ML Software Developer Intern",
+            title: "AI Software Intern",
             company: "TabSquare InfoTech Private Limited",
             description:
-                "Assisted in preprocessing datasets, experimenting with transformer models, and building prototype NLP endpoints using FastAPI.",
+                "Assisted with software development, application testing, debugging, and API validation to support reliable application functionality.",
             current: false,
         },
         {
-            year: "2021-2024",
-            title: "Bachelor of Technology",
+            year: "2021 - 2024",
+            title: "B.Tech - Artificial Intelligence and Data Science",
             company: "Mepco Schlenk Engineering College",
-            description: "Artificial Intelligence and Data Science covering machine learning algorithms, deep learning, and software engineering principles.",
+            description: "Covering machine learning workflows, computer vision, deep learning, NLP, and software engineering principles.",
             current: false,
         },
         {
-            year: "2019-2021",
-            title: "Engineer",
-            company: "TVS Electronics pvt Ltd",
-            description: "Conducted functional board testing, circuit diagnostics, and quality inspection for high volume electronic component manufacturing.",
-            current: false,
-        },
-        {
-            year: "2018-2019",
+            year: "Jun 2019 - Jun 2021",
             title: "Technician",
-            company: "Tenneco Automotive India Pvt Ltd",
-            description: "Operated automated assembly lines and conducted dimensional quality checks on automotive exhaust and suspension components.",
+            company: "Lampex Electronics Limited",
+            description: "Operated manufacturing equipment involved in the production and assembly of LCD/LCM display modules and electronic components.",
             current: false,
         },
         {
-            year: "2015-2018",
-            title: "Diploma",
+            year: "Jun 2018 - Jun 2019",
+            title: "Junior Technician",
+            company: "Tenneco Automotive India",
+            description: "Operated manufacturing machines used in the production of automotive shock absorbers and suspension components.",
+            current: false,
+        },
+        {
+            year: "2015 - 2018",
+            title: "Diploma - Electrical and Electronics Engineering",
             company: "Government Polytechnic College",
             description: "Electrical and Electronics Engineering with practical training in circuit theory, testing instruments, and industrial electronics.",
             current: false,
@@ -159,13 +159,19 @@ export default function About({ id }: { id?: string }) {
                                         }`}
                                 >
                                     <p>
-                                        I am an AI/ML Software Engineer specializing in building practical, production ready AI systems. My work focuses on Retrieval Augmented Generation (RAG), conversational agent workflows, and connecting large language models with enterprise databases through clean, testable FastAPI services.
+                                        Every stage of my career has shaped the way I approach engineering, problem solving, and technology. The journey began in electronics and automotive manufacturing, where hands-on experience developed a strong sense of precision, systematic troubleshooting, and the importance of reliability in real-world operations.
                                     </p>
                                     <p>
-                                        My journey began in electronics engineering, where I spent several years working in hardware diagnostics and manufacturing quality control at TVS Electronics and Tenneco. That background instilled a disciplined troubleshooting mindset and a strict respect for reliability. Transitioning into Artificial Intelligence and Data Science at Mepco Schlenk Engineering College, I applied that engineering foundation toward machine learning algorithms, data engineering, and modern NLP architectures.
+                                        That foundation led to a deeper interest in Artificial Intelligence and Data Science, opening the door to a new way of approaching complex problems. Combining practical engineering knowledge with software development created an opportunity to explore machine learning, intelligent automation, and AI-powered applications.
                                     </p>
                                     <p>
-                                        At DoubleTap Innovations, I take AI features from initial architecture all the way to production. This includes building vector retrieval pipelines, connecting LLMs to business databases, optimizing response latency, and setting up output guardrails. I focus on building dependable software where accuracy, speed, and infrastructure cost stay balanced.
+                                        As the journey progressed into AI engineering, the focus shifted towards turning concepts into working solutions. Experience across diverse projects has involved developing backend services, integrating AI capabilities, addressing technical challenges, and collaborating with developers to bring ideas into practice. Each project has strengthened the ability to approach problems analytically, adapt to new technologies, and make thoughtful engineering decisions.
+                                    </p>
+                                    <p>
+                                        Beyond implementation, the journey has also involved taking ownership of assigned projects, supporting junior developers, and learning to balance innovation with maintainability and reliability. These experiences have shaped an engineering mindset that values not just what a system can do, but how effectively it serves its purpose.
+                                    </p>
+                                    <p>
+                                        The path forward is driven by continuous learning, deeper technical expertise, and the pursuit of meaningful innovation — building AI solutions that move beyond experimentation and create practical value in the real world.
                                     </p>
                                 </div>
                             </div>

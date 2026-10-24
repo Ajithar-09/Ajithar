@@ -10,9 +10,17 @@ export default function ProjectsPage() {
     const { theme } = useTheme()
     const [selectedCategory, setSelectedCategory] = useState("Professional Projects")
     const [expandedTech, setExpandedTech] = useState<Record<number, boolean>>({})
+    const [expandedDesc, setExpandedDesc] = useState<Record<number, boolean>>({})
 
     const toggleExpandTech = (projectId: number) => {
         setExpandedTech((prev) => ({
+            ...prev,
+            [projectId]: !prev[projectId],
+        }))
+    }
+
+    const toggleExpandDesc = (projectId: number) => {
+        setExpandedDesc((prev) => ({
             ...prev,
             [projectId]: !prev[projectId],
         }))
@@ -27,20 +35,16 @@ export default function ProjectsPage() {
             role: "Senior AI/ML Engineer",
             projectType: "Professional",
             description:
-                "An enterprise AI powered platform connecting students with career opportunities while helping recruiters streamline candidate screening, automated ATS analysis, personalized syllabus generation, and real time mock interviews.",
+                "An enterprise AI recruitment platform connecting students with career opportunities while streamlining candidate screening, ATS scoring, personalized learning paths, and interactive mock interviews.",
             longDescription:
-                "InternSharks.ai is an enterprise grade AI powered internship and recruitment platform designed to connect students and fresh graduates with career opportunities while helping recruiters streamline candidate screening, training, assessment, and performance tracking.",
+                "InternSharks.ai is an enterprise grade AI powered recruitment platform integrating automated ATS scoring, conversational resume creation, AI interview sessions, and structured candidate assessment.",
             keyContributions: [
-                "AI Resume Processing: Document processing workflows for PDF, DOCX, and image files with OCR or vision based fallback handling.",
-                "ATS Analysis: Structured ATS output generation and caching mechanisms to optimize processing speed and reduce redundant workloads.",
-                "Generative AI: Conversational resume creation, syllabus generation, and automated resume enhancement workflows.",
-                "AI Assessment: Automated MCQ generation, question validation, difficulty level organization, and profile based assessment modules.",
-                "Real Time Mock Interviews: WebSocket based HR mock interview session handling, including audio chunks and real time event streaming.",
-                "AI Image Generation: ResDP related image generation, validation, fallback handling, watermarking, and cloud object storage integration.",
-                "Analytics & Platform Services: Selected CRM analytics, business insights, KYC related processing, and automated certificate generation."
+                "Developed resume processing workflows for PDF, DOCX, and image inputs, integrating text extraction, OCR, AI powered resume enhancement, ATS scoring, job description matching, and structured JSON analysis.",
+                "Built an AI powered resume creation chatbot and contributed to candidate profiling, student prediction, personalized learning path generation, MCQ based skill assessments, and automated answer validation.",
+                "Contributed to six rounds of AI powered mock interview workflows and single agent and multi agent group discussions, supporting candidate evaluation, interactive interview sessions, and assessment driven feedback."
             ],
             image: "/internsharks-BNiRMrYc.jpeg",
-            tech: ["Python", "FastAPI", "OpenAI APIs", "Document AI / OCR", "ATS Engine", "WebSockets", "Docker", "Cloud Storage"],
+            tech: ["Python", "FastAPI", "LLM APIs", "OCR", "WebSockets", "Docker", "Cloud Storage"],
             category: "Professional Projects",
             github: "",
             demo: "https://www.internsharks.ai/",
@@ -59,18 +63,15 @@ export default function ProjectsPage() {
             description:
                 "An enterprise AI powered retail management platform streamlining grocery store operations through automated bill extraction, voice driven sales entry, weighing scale OCR, and consumer shopping workflows.",
             longDescription:
-                "Fulupo is an AI powered retail management platform designed to streamline grocery store operations and consumer shopping workflows. The platform combines artificial intelligence, computer vision, OCR, speech processing, and intelligent automation to support product recognition, bill extraction, voice based purchase and sales entry, inventory workflows, product search, and personalized recommendations.",
+                "Fulupo combines computer vision, OCR, speech processing, and intelligent automation to power product recognition, receipt/bill parsing, voice-based purchase entries, inventory search, and AI recipe generation.",
             keyContributions: [
-                "AI Bill Extraction & Backend Integration: Integrated the AI team bill extraction model into the existing FastAPI backend architecture and API workflows.",
-                "Document Intelligence: Built and integrated AI driven document processing pipelines for structured bill data extraction.",
-                "Computer Vision & Weighing Scale Processing: Contributed to computer vision and image processing backend workflows, including weighing scale display readings.",
-                "Voice AI & Regional NLP: Engineered voice processing workflows handling regional language grocery inputs, spelling variations, units, and quantities.",
-                "Intelligent Product Search: Supported AI enabled product search, catalog retrieval, text normalization, and high performance caching.",
-                "Real Time Communication & WebSockets: Investigated and fixed WebSocket communication issues affecting real time image processing workflows.",
-                "Production Debugging & Reliability: Resolved real time workflow bugs in the consumer application, validating backend integration across AI enabled microservices."
+                "Built computer vision pipelines for product detection, tracking, image quality, cropping, best-frame selection, and catalog matching using visual attributes, embeddings, and OCR.",
+                "Developed receipt/bill extraction, column detection, tax and product parsing, structured data processing, and Excel report generation.",
+                "Implemented voice transcription, regional language search, inventory matching, image based product recognition, personalized recommendations, and AI recipe generation.",
+                "Built real time grocery recognition and 7 segment weighing scale OCR using WebSockets and REST APIs, with session management and weight normalization; contributed to bank passbook and cheque OCR."
             ],
             image: "/fulupo.png",
-            tech: ["Python", "FastAPI", "OpenAI APIs", "Computer Vision / OCR", "Speech to Text", "NLP", "WebSockets", "Redis", "MongoDB", "Elasticsearch", "Docker", "Jenkins"],
+            tech: ["Python", "FastAPI", "YOLOv8", "OpenCLIP", "OCR", "LLM APIs", "WebSockets", "MongoDB", "Docker"],
             category: "Professional Projects",
             github: "",
             demo: "https://fulupo.ai/",
@@ -80,6 +81,58 @@ export default function ProjectsPage() {
         },
         {
             id: 101,
+            title: "Selfitoons",
+            subtitle: "AI Powered Video Generation Backend",
+            company: "DoubleTap Innovations and Technologies Pvt. Ltd.",
+            role: "Senior AI/ML Engineer",
+            projectType: "Professional",
+            domain: "Generative AI · Video Synthesis · Speech-to-Text",
+            description:
+                "An advanced generative AI video backend supporting character image generation, multilingual audio transcription, transcript interpretation, and video prompt pipelines for Grok and Kling.",
+            longDescription:
+                "Selfitoons is an AI video generation platform and backend architecture developed to automate character image creation, speech-to-text processing, and dynamic prompt synthesis for cutting-edge video generation models.",
+            keyContributions: [
+                "Developed AI workflows for character image generation, audio transcription, transcript interpretation, concept-image analysis, and AI generated source images for video preparation.",
+                "Implemented multilingual speech to text processing using Whisper, transcript normalization, dialogue preparation, and model specific video prompt generation for Grok and Kling based on lip sync requirements.",
+                "Built asynchronous processing workflows with request tracking, status polling, timeout handling, MongoDB based processing status, and Cloudflare R2 integration for generated image storage."
+            ],
+            image: "/selfitoons.png",
+            tech: ["Python", "FastAPI", "OpenAI APIs", "Whisper", "MongoDB", "Cloudflare R2", "Grok", "Kling"],
+            category: "Professional Projects",
+            github: "",
+            demo: "https://selfitoons.ai/",
+            appLink: "https://play.google.com/store/apps/details?id=com.doubletap.ai.selfitoons&pcampaignid=web_share",
+            date: "Present",
+            status: "Live in Production",
+        },
+        {
+            id: 102,
+            title: "Toice",
+            subtitle: "AI Task Reporting & Voice Automation",
+            company: "DoubleTap Innovations and Technologies Pvt. Ltd.",
+            role: "Senior AI/ML Engineer",
+            projectType: "Professional",
+            domain: "Voice AI · Task Automation · Enterprise Productivity",
+            description:
+                "An intelligent task reporting and voice processing platform that extracts task details, assignees, priorities, and deadlines from voice inputs and generates comprehensive AI task summaries.",
+            longDescription:
+                "Toice is an AI driven task management and reporting platform designed to convert spoken language and unstructured communication into structured, actionable enterprise tasks and summarized reports.",
+            keyContributions: [
+                "Developed audio transcription and AI powered task creation, extracting task details, assignees, priorities, and deadlines from voice inputs.",
+                "Implemented AI driven task report generation by summarizing task records, chat messages, attachments, and activity history.",
+                "Integrated LLM based information extraction and structured task processing to convert unstructured inputs into actionable tasks and organized reports."
+            ],
+            image: "/toice.png",
+            tech: ["Python", "FastAPI", "OpenAI APIs", "MongoDB", "Speech-to-Text", "WebSockets", "Docker"],
+            category: "Professional Projects",
+            github: "",
+            demo: "https://toice.in/",
+            appLink: "https://play.google.com/store/apps/details?id=com.doubletap.toice.ai&pcampaignid=web_share",
+            date: "Present",
+            status: "Live in Production",
+        },
+        {
+            id: 103,
             title: "WellBits",
             subtitle: "AI Powered Wellness & Smart Eating Analysis Platform",
             company: "DoubleTap Innovations and Technologies Pvt. Ltd.",
@@ -91,15 +144,12 @@ export default function ProjectsPage() {
             longDescription:
                 "WellBits is an AI powered wellness and nutrition platform designed to support personalized health goals, meal planning, food analysis, and mindful eating. It combines AI driven nutrition and wellness services with a machine learning based eating behaviour analysis system called ChewTracker.",
             keyContributions: [
-                "ChewTracker ML Pipeline: Worked on bite detection and chewing detection improvements within the visual eating behaviour analysis system.",
-                "Multi Face & Session Logic: Contributed to multiple face detection handling and automatic pause and resume behaviour during eating sessions.",
-                "Real Time WebSockets: Implemented event streaming, replay validation, session state management, and real time WebSocket communication.",
-                "Ground Truth & Regression Testing: Contributed to evaluation workflows and rigorous regression testing for eating behaviour detection.",
-                "Session Completion Integration: Integrated session completion response payloads while preserving chew analysis result data.",
-                "Backend & AI Debugging: Validated and optimized the end to end AI and ML workflow across backend microservices and cloud media storage."
+                "Developed AI powered wellness APIs for meal image analysis, personalized nutrition and goal recommendations, food suggestions, meal scheduling, wellness challenges, and conversational AI wellness assistance.",
+                "Worked on the ChewTracker pipeline for bite and chewing detection, including multiface session handling, real time WebSocket events, pause/resume workflows, session state management, and prediction validation against ground-truth data.",
+                "Integrated MongoDB and Cloudflare R2 for data and media storage, AI token and cost tracking, request validation and concurrency controls, and Docker based deployment."
             ],
             image: "/wellbits.png",
-            tech: ["Python", "FastAPI", "OpenAI APIs", "Computer Vision", "Machine Learning", "MediaPipe", "WebSockets", "Redis", "MongoDB", "REST APIs"],
+            tech: ["Python", "FastAPI", "OpenAI API", "OpenCV", "NumPy", "MongoDB", "Redis", "Cloudflare R2", "WebSockets"],
             category: "Professional Projects",
             github: "",
             demo: "https://wellbits.in/",
@@ -108,8 +158,8 @@ export default function ProjectsPage() {
             status: "Live in Production",
         },
         {
-            id: 102,
-            title: "AI Token & Cost Dashboard",
+            id: 104,
+            title: "AI Token & Cost Management System",
             subtitle: "Centralized AI API Usage, Expense Tracking & Analytics",
             company: "DoubleTap Innovations and Technologies Pvt. Ltd.",
             role: "AI Engineer / Backend Developer",
@@ -120,18 +170,14 @@ export default function ProjectsPage() {
             longDescription:
                 "Developed and maintained a centralized AI token analytics and access management backend designed to monitor API usage and expenses across multiple company projects. The platform aggregates token consumption and cost data across services, API keys, and development and production environments, providing consolidated visibility into AI resource utilization.",
             keyContributions: [
-                "Token Usage Analytics: Tracks input, output, and total token consumption across monitored microservices.",
-                "Multi Project Cost Aggregation: Consolidates API expenses in USD and INR across project databases and environments.",
-                "AI Analytics Assistant: Supports natural language analytics workflows through AI tool calling and automated Excel report generation.",
-                "API Credit Monitoring: Real time calculation of credit burn rates, remaining balances, and automated low credit email notifications.",
-                "Role Based Access Control: Implements JWT authentication, admin and user permissions, and project level access boundaries.",
-                "Automated CI/CD: Containerized deployment pipelines leveraging Docker and Jenkins."
+                "Developed token-usage aggregation, AI cost reporting in USD and INR, credit monitoring, and low credit email alerts.",
+                "Implemented natural language analytics, Excel report generation, and role based access controls."
             ],
             image: "/token-dashboard.png",
-            tech: ["Python", "FastAPI", "OpenAI APIs", "Gemini API", "MongoDB", "Motor", "JWT", "Docker", "Jenkins", "OpenPyXL"],
+            tech: ["Python", "FastAPI", "AI APIs", "MongoDB", "Docker", "OpenPyXL"],
             category: "Professional Projects",
             github: "",
-            demo: "#",
+            demo: "https://ai-token.doubletapinnovations.com/login",
             date: "Present",
             status: "Completed",
         },
@@ -479,11 +525,36 @@ export default function ProjectsPage() {
                                             </div>
 
                                             {/* Description */}
-                                            <p
-                                                className={`text-sm mb-4 leading-relaxed line-clamp-3 h-[4.5rem] overflow-hidden ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}
-                                            >
-                                                {project.description}
-                                            </p>
+                                            <div className="mb-4">
+                                                <p
+                                                    onClick={() => toggleExpandDesc(project.id)}
+                                                    className={`text-sm leading-relaxed cursor-pointer transition-colors ${
+                                                        expandedDesc[project.id]
+                                                            ? ""
+                                                            : "line-clamp-3 min-h-[4.5rem]"
+                                                    } ${theme === "dark" ? "text-gray-300 hover:text-purple-200" : "text-gray-600 hover:text-purple-700"}`}
+                                                    title={expandedDesc[project.id] ? "Click to show less" : "Click to read full description"}
+                                                >
+                                                    {project.description}
+                                                </p>
+                                                {project.description.length > 90 && (
+                                                    <button
+                                                        type="button"
+                                                        onClick={(e) => {
+                                                            e.preventDefault()
+                                                            e.stopPropagation()
+                                                            toggleExpandDesc(project.id)
+                                                        }}
+                                                        className={`text-xs font-semibold mt-1 inline-flex items-center gap-1 cursor-pointer transition-colors ${
+                                                            theme === "dark"
+                                                                ? "text-purple-400 hover:text-purple-300"
+                                                                : "text-purple-600 hover:text-purple-800"
+                                                        }`}
+                                                    >
+                                                        {expandedDesc[project.id] ? "Show less ↑" : "Read more ↓"}
+                                                    </button>
+                                                )}
+                                            </div>
 
                                             {/* Tech Stack */}
                                             <div className="flex flex-wrap gap-1.5 mb-2 min-h-[3.75rem] items-start content-start">
@@ -561,7 +632,7 @@ export default function ProjectsPage() {
                                                     whileTap={{ scale: 0.95 }}
                                                 >
                                                     <ExternalLink className="w-4 h-4" />
-                                                    <span>Demo</span>
+                                                    <span>{project.category === "Professional Projects" || project.projectType === "Professional" ? "Website" : "Demo"}</span>
                                                 </motion.a>
                                             )}
                                             {(!project.github || project.github === "#") &&
